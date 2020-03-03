@@ -40,7 +40,9 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
-      <div id="bg"></div>
+      <div id="bg">
+        <div id="bg-overlay"></div>
+      </div>
     </>
   )
 }

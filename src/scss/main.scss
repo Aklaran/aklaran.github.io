@@ -1,1 +1,12 @@
+/* 
+    Main SCSS file that will compile all of my components into one easy-to-import place :)
+*/ 
+
+// Vars, functions, mixins, and other utils
+
+@import 'mixins';
+@import 'vars';
+
+// Components
+
 @import 'bg';
