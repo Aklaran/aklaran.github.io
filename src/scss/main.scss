@@ -4,9 +4,13 @@
 
 // Vars, functions, mixins, and other utils
 
-@import 'mixins';
-@import 'vars';
+@import 'utils/mixins';
+@import 'utils/vars';
+
+// Base
+
+@import 'base/typography';
 
 // Components
 
-@import 'bg';
+@import 'components/bg';
