@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{Ofmp:function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),l=a.n(n),o=a("Wbzz"),r=a("Bl7J"),i=a("tBDR"),m=a("vrFN");t.default=function(){return l.a.createElement(r.a,null,l.a.createElement(m.a,{title:"Home"}),l.a.createElement("h1",null,"issa portfolio"),l.a.createElement("div",{style:{maxWidth:"300px",marginBottom:"1.45rem"}},l.a.createElement(i.a,null)),l.a.createElement(o.Link,{to:"/page-2/"},"Go to page 2"))}}}]);
+//# sourceMappingURL=component---src-pages-work-js-12a464daded3d3305613.js.map
