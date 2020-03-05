@@ -20,6 +20,7 @@ const IndexPage = () => (
       but I plan on implementing the blog first cuz I wanna wriiiiiite yo. Thanks for checkin' in!</p>
       <h1 style={{textAlign: 'center'}}>THE WALL OF GITTIN'R'DUN</h1>
       <ul>
+        <li>4.3.2020 - Implemented Markdown Blog functionality :DD</li>
         <li>4.3.2020 - Made the page card and content for this page!</li>
         <li>3.3.2020 - Installed the typography.js package to simplify typography (for now... I'll definitely tweak it later)</li>
         <li>2.3.2020 - Nuked all the starter css and added a nifty mountain background/overlay combo alla <a href="http://gatsby-dimension.surge.sh">The Dimension Starter</a></li>
