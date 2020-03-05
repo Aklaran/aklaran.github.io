@@ -1,19 +1,47 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql, Link } from 'gatsby'
 
-import Layout from "../js/components/layout"
-import Image from "../js/components/image"
 import SEO from "../js/components/seo"
+import PageCard from "../js/components/page-card"
 
-const BlogPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>issa blog</h1>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+export default function BlogIndex({ data }) {
+  const posts = data.allMarkdownRemark.edges
 
-export default BlogPage
+  return (
+    <>
+      <SEO title="Blog" />
+      <h1>issa blog</h1>
+
+      <div>
+        {posts.map(({ node: post }) => (
+          <Link to={post.frontmatter.path}>
+            <PageCard title={post.frontmatter.title} date={post.frontmatter.date}>
+              {post.excerpt}
+            </PageCard>
+          </Link>
+        ))}
+      </div>
+    </>
+  )
+}
+
+export const pageQuery = graphql`
+  query BlogsQuery {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      limit: 1000
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            date
+            
+          }
+          excerpt
+        }
+      }
+    }   
+  }
+`

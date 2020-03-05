@@ -1,11 +1,10 @@
 import React from "react"
 
-import Layout from "../js/components/layout"
 import SEO from "../js/components/seo"
 import PageCard from "../js/components/page-card"
 
 const IndexPage = () => (
-  <Layout>
+  <>
     <SEO title="Home" />
     <PageCard title="YO!">
       <p>What's up homies. I'm Bo.<br/><br />
@@ -28,7 +27,7 @@ const IndexPage = () => (
         <li>29.2.2020 - Stayed up till 4am picking and buying a domain name. And in the end I went with aklarans.voyage?! Jeez what goes on in this guy's head...</li>
       </ul>
     </PageCard>
-  </Layout>
+  </>
 )
 
 export default IndexPage
