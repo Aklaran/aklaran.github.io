@@ -14,7 +14,7 @@ export default function BlogIndex({ data }) {
 
       <div>
         {posts.map(({ node: post }) => (
-          <Link to={post.frontmatter.path}>
+          <Link to={post.frontmatter.path} key={post.frontmatter.path}>
             <PageCard title={post.frontmatter.title} date={post.frontmatter.date}>
               {post.excerpt}
             </PageCard>
