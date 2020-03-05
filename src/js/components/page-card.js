@@ -15,7 +15,7 @@ const PageCard = ({ title, date, children }) => {
 
 PageCard.propTypes = {
     title: PropTypes.string.isRequired,
-    date: PropTypes.instanceOf(Date),
+    date: PropTypes.string,
     children: PropTypes.node
   }
   
