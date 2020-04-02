@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{vx99:function(e,t,a){"use strict";a.r(t);var n=a("q1tI"),l=a.n(n),r=a("Wbzz"),o=a("Bl7J"),c=a("tBDR"),i=a("vrFN");t.default=function(){return l.a.createElement(o.a,null,l.a.createElement(i.a,{title:"Home"}),l.a.createElement("h1",null,"issa blog"),l.a.createElement("div",{style:{maxWidth:"300px",marginBottom:"1.45rem"}},l.a.createElement(c.a,null)),l.a.createElement(r.Link,{to:"/page-2/"},"Go to page 2"))}}}]);
-//# sourceMappingURL=component---src-pages-blog-js-253ffa3edc9f3db6d8d3.js.map
