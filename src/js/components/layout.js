@@ -45,31 +45,23 @@ const Layout = ({ children, location }) => {
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <AnimatePresence>
-          <motion.main
-             key={location.pathname}
-             variants={variants}
-             initial="initial"
-             animate="enter"
-             exit="exit">
-            {children}
-          </motion.main>
-        </AnimatePresence>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+    <div id="site-wrapper">
+
+      <AnimatePresence>
+        <motion.div
+           id="header"
+           key="bg"
+           variants={variants}
+           initial="initial"
+           animate="enter"
+           exit="exit">
+        <Header siteTitle={data.site.siteMetadata.title} />
+        </motion.div>
+      </AnimatePresence>
+      <main>
+          {children}
+      </main>
+
       <AnimatePresence>
         <motion.div
            id="bg"
@@ -81,7 +73,8 @@ const Layout = ({ children, location }) => {
           <div id="bg-overlay"></div>
         </motion.div>
       </AnimatePresence>
-    </>
+      
+    </div>
   )
 }
 

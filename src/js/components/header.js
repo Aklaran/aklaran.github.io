@@ -3,29 +3,9 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-        textAlign: 'center'
-      }}
-    >
-      <h1 style={{ marginBottom: 20 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
+  <header>
+      <h1>
+        <Link to="/">{siteTitle}</Link>
       </h1>
 
       <h2 style={{ margin: 0 }}>
@@ -33,7 +13,6 @@ const Header = ({ siteTitle }) => (
         <Link to="/blog">Blog</Link>&nbsp;&nbsp;&nbsp;
         <Link to="/codex">Codex</Link>
       </h2>
-    </div>
   </header>
 )
 

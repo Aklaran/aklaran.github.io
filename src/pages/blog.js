@@ -4,11 +4,40 @@ import { graphql, Link } from 'gatsby'
 import SEO from "../js/components/seo"
 import PageCard from "../js/components/page-card"
 
+import { motion, AnimatePresence } from "framer-motion"
+
+
+const duration = 0.5
+
+const variants = {
+  initial: {
+    opacity: 0,
+  },
+  enter: {
+    opacity: 1,
+    transition: {
+      duration: duration,
+      delay: duration,
+      when: 'beforeChildren',
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: { duration: duration },
+  },
+}
+
 export default function BlogIndex({ data }) {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <>
+    <AnimatePresence>
+        <motion.div
+            key={"Blog"}
+            variants={variants}
+            initial="initial"
+            animate="enter"
+            exit="exit">
       <SEO title="Blog" />
       <h1>issa blog</h1>
 
@@ -21,7 +50,8 @@ export default function BlogIndex({ data }) {
           </Link>
         ))}
       </div>
-    </>
+      </motion.div>
+    </AnimatePresence>
   )
 }
 
