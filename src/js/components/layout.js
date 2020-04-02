@@ -8,11 +8,32 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { motion, AnimatePresence } from "framer-motion"
 
 import Header from "./header"
 import "../../scss/main.scss"
 
-const Layout = ({ children }) => {
+const duration = 0.5
+
+const variants = {
+  initial: {
+    opacity: 0,
+  },
+  enter: {
+    opacity: 1,
+    transition: {
+      duration: duration,
+      delay: duration,
+      when: 'beforeChildren',
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: { duration: duration },
+  },
+}
+
+const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -33,16 +54,33 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <main>{children}</main>
+        <AnimatePresence>
+          <motion.main
+             key={location.pathname}
+             variants={variants}
+             initial="initial"
+             animate="enter"
+             exit="exit">
+            {children}
+          </motion.main>
+        </AnimatePresence>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
-      <div id="bg">
-        <div id="bg-overlay"></div>
-      </div>
+      <AnimatePresence>
+        <motion.div
+           id="bg"
+           key="bg"
+           variants={variants}
+           initial="initial"
+           animate="enter"
+           exit="exit">
+          <div id="bg-overlay"></div>
+        </motion.div>
+      </AnimatePresence>
     </>
   )
 }
