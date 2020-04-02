@@ -16,6 +16,7 @@
     -o-background-size: cover;
     background-size: cover;
     background-position: center center;
+    background-color: black;
 }
 
 #bg-overlay {
@@ -26,4 +27,8 @@
     left: 0;
     background-color: $bg_overlay;
     z-index: -1;
+}
+
+.body {
+    background-color: black;
 }
