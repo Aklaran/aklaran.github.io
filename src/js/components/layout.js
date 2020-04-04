@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
     <>
       <div id="flex-container">
         <motion.div
-          variants={headerVariant}
+          variants={fadeVariant}
           initial="initial"
           animate="enter"
           >

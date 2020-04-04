@@ -1,9 +1,22 @@
 a {
     text-decoration: none;
+    color: black;
 
     &:hover {
         color: $color4;
     }
+
+    &:hover {
+        fill: $color4;
+    }
+}
+
+h1 a{
+    color: black;
+}
+
+h2 a{
+    color: black;
 }
 
 #card-heading {
