@@ -11,19 +11,6 @@ export const fadeVariant = {
   }
 }
 
-export const headerVariant = {
-  initial: {
-      opacity: 0,
-  },
-  enter: {
-      opacity: 1,
-      transition: {
-      duration: 1,
-      delay: 3,
-      },
-  }
-}
-
 export const landingContainerVariant = {
   hidden: { opacity: 0 },
   show: {

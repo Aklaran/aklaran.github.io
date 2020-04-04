@@ -7,7 +7,6 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
 import { motion, AnimatePresence } from "framer-motion"
 
 import Header from "./header"
@@ -15,17 +14,7 @@ import "../../scss/main.scss"
 
 import { fadeVariant } from "../utils/motion-variants"
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+const Layout = ({ children, location }) => {
   return (
     <>
       <div id="flex-container">
@@ -34,7 +23,7 @@ const Layout = ({ children }) => {
           initial="initial"
           animate="enter"
           >
-          <Header siteTitle={data.site.siteMetadata.title} />
+          <Header atHome={location.pathname === "/"} />
         </motion.div>
 
         <main>
