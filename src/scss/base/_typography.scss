@@ -1,5 +1,9 @@
-* {
-    color: $fg;
+a {
+    text-decoration: none;
+
+    &:hover {
+        color: $color4;
+    }
 }
 
 #card-heading {
@@ -16,9 +20,4 @@
     a {
         color: rgb(34, 194, 194);
     }
-}
-
-a {
-    color: $fg;
-    text-decoration: none;
 }

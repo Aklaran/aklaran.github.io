@@ -4,12 +4,30 @@
 
 // Color palette
 
-$bg:            #1b1f22;
-$bg-alt:        #000000;
+// $bg:            #1b1f22;
+// $bg-alt:        #000000;
+// $bg-overlay:    rgba(255, 255, 255, 0.9);
+// $fg:            #000000;
+// $fg-bold:       #ffffff;
+// $fg-light:      rgba(255,255,255,0.5);
+// $border:        #ffffff;
+// $border-bg:     rgba(255,255,255,0.075);
+// $border-bg-alt: rgba(255,255,255,0.175);
+
+/* Coolors Exported Palette - coolors.co/141e91-353274-932354-1c1c1c-f9e0dc */
+
+/* HSL */
+$color1: hsla(235%, 76%, 32%, 1);
+$color2: hsla(243%, 40%, 33%, 1);
+$color3: hsla(334%, 62%, 36%, 1);
+$color4: hsla(0%, 0%, 11%, 1);
+$color5: hsla(8%, 71%, 92%, 1);
+
+/* RGB */
+$color1: rgba(20, 30, 145, 1);
+$color2: rgba(53, 50, 116, 1);
+$color3: rgba(147, 35, 84, 1);
+$color4: rgba(150, 150, 150, 1);
+$color5: rgba(249, 224, 220, 1);
+
 $bg-overlay:    rgba(255, 255, 255, 0.9);
-$fg:            #000000;
-$fg-bold:       #ffffff;
-$fg-light:      rgba(255,255,255,0.5);
-$border:        #ffffff;
-$border-bg:     rgba(255,255,255,0.075);
-$border-bg-alt: rgba(255,255,255,0.175);
