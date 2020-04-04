@@ -1,38 +1,16 @@
 import React from "react"
 
 import SEO from "../js/components/seo"
-import Image from "../js/components/image"
-import { motion, AnimatePresence } from "framer-motion"
 
+// Image Imports
+import Image from "../js/components/image"
 import GithubIcon from "../images/svg/github.svg"
 import LinkedInIcon from "../images/svg/linkedin.svg"
 import YoutubeIcon from "../images/svg/youtube.svg"
 
-
-const outerContainer = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      duration: 2,
-      delayChildren: 1,
-      staggerChildren: 0.4
-    }
-  }
-}
-
-const item = {
-  hidden: { 
-    opacity: 0, 
-    y: -30 },
-  show: { 
-    opacity: 1, 
-    y: 0,
-    transition: {
-      duration: 1
-    }
-  }
-}
+// Animation Imports
+import { motion } from "framer-motion"
+import { landingContainerVariant, landingItemVariant } from "../js/utils/motion-variants"
 
 const IndexPage = () => (
   <>
@@ -40,24 +18,24 @@ const IndexPage = () => (
         <motion.div
           id="image-container"
           key={"Home"}
-          variants={outerContainer}
+          variants={landingContainerVariant}
           initial="hidden"
           animate="show"
           exit="hidden"
         >
-          <motion.div variants={item}>
+          <motion.div variants={landingItemVariant}>
             <Image/>
           </motion.div>
 
-          <motion.div className="social-icon" variants={item}>
+          <motion.div className="social-icon" variants={landingItemVariant}>
             <a href="https://github.com/Aklaran"><GithubIcon height='45px' width='45px'/></a>
           </motion.div>
 
-          <motion.div className="social-icon" variants={item}>
+          <motion.div className="social-icon" variants={landingItemVariant}>
             <a href="https://www.linkedin.com/in/siri-tembunkiart/"><LinkedInIcon height='45px' width='45px'/></a>
           </motion.div>
 
-          <motion.div className="social-icon" variants={item}>
+          <motion.div className="social-icon" variants={landingItemVariant}>
             <a href="https://www.youtube.com/watch?v=hsJUNatpDNw"><YoutubeIcon height='45px' width='45px'/></a>
           </motion.div>
 

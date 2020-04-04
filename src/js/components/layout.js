@@ -13,27 +13,9 @@ import { motion, AnimatePresence } from "framer-motion"
 import Header from "./header"
 import "../../scss/main.scss"
 
-const duration = 0.5
+import { headerVariant, fadeVariant } from "../utils/motion-variants"
 
-const variants = {
-  initial: {
-    opacity: 0,
-  },
-  enter: {
-    opacity: 1,
-    transition: {
-      duration: duration,
-      delay: duration,
-      when: 'beforeChildren',
-    },
-  },
-  exit: {
-    opacity: 0,
-    transition: { duration: duration },
-  },
-}
-
-const Layout = ({ children, location }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -48,7 +30,7 @@ const Layout = ({ children, location }) => {
     <>
       <div id="flex-container">
         <motion.div
-          variants={variants}
+          variants={headerVariant}
           initial="initial"
           animate="enter"
           >
@@ -65,7 +47,7 @@ const Layout = ({ children, location }) => {
 
         <motion.div
            id="bg"
-           variants={variants}
+           variants={fadeVariant}
            initial="initial"
            animate="enter"
            >

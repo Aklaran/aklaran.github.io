@@ -4,28 +4,8 @@ import { graphql, Link } from 'gatsby'
 import SEO from "../js/components/seo"
 import PageCard from "../js/components/page-card"
 
-import { motion, AnimatePresence } from "framer-motion"
-
-
-const duration = 0.5
-
-const variants = {
-  initial: {
-    opacity: 0,
-  },
-  enter: {
-    opacity: 1,
-    transition: {
-      duration: duration,
-      delay: duration,
-      when: 'beforeChildren',
-    },
-  },
-  exit: {
-    opacity: 0,
-    transition: { duration: duration },
-  },
-}
+import { motion } from "framer-motion"
+import { fadeVariant } from "../js/utils/motion-variants"
 
 export default function BlogIndex({ data }) {
   const posts = data.allMarkdownRemark.edges
@@ -33,7 +13,7 @@ export default function BlogIndex({ data }) {
   return (
       <motion.div
         key={"Blog"}
-        variants={variants}
+        variants={fadeVariant}
         initial="initial"
         animate="enter"
         exit="exit"
