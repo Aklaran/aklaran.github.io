@@ -45,36 +45,35 @@ const Layout = ({ children, location }) => {
   `)
 
   return (
-    <div id="site-wrapper">
-
-      <AnimatePresence>
+    <>
+      <div id="flex-container">
         <motion.div
-           id="header"
-           key="bg"
-           variants={variants}
-           initial="initial"
-           animate="enter"
-           exit="exit">
-        <Header siteTitle={data.site.siteMetadata.title} />
+          id="header"
+          variants={variants}
+          initial="initial"
+          animate="enter"
+          >
+          <Header siteTitle={data.site.siteMetadata.title} />
         </motion.div>
-      </AnimatePresence>
-      <main>
-          {children}
-      </main>
 
-      <AnimatePresence>
+        <main>
+          <AnimatePresence>
+            {children}
+          </AnimatePresence>
+        </main>
+
+      </div>
+
         <motion.div
            id="bg"
-           key="bg"
            variants={variants}
            initial="initial"
            animate="enter"
-           exit="exit">
+           >
           <div id="bg-overlay"></div>
         </motion.div>
-      </AnimatePresence>
       
-    </div>
+    </>
   )
 }
 
