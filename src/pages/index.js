@@ -50,15 +50,15 @@ const IndexPage = () => (
           </motion.div>
 
           <motion.div className="social-icon" variants={item}>
-            <GithubIcon height='45px' width='45px'/>
+            <a href="https://github.com/Aklaran"><GithubIcon height='45px' width='45px'/></a>
           </motion.div>
 
           <motion.div className="social-icon" variants={item}>
-            <LinkedInIcon height='45px' width='45px'/>
+            <a href="https://www.linkedin.com/in/siri-tembunkiart/"><LinkedInIcon height='45px' width='45px'/></a>
           </motion.div>
 
           <motion.div className="social-icon" variants={item}>
-            <YoutubeIcon height='45px' width='45px'/>
+            <a href="https://www.youtube.com/watch?v=hsJUNatpDNw"><YoutubeIcon height='45px' width='45px'/></a>
           </motion.div>
 
         </motion.div>
