@@ -4,11 +4,20 @@ import { graphql, Link } from 'gatsby'
 import SEO from "../js/components/seo"
 import PageCard from "../js/components/page-card"
 
+import { motion } from "framer-motion"
+import { fadeVariant } from "../js/utils/motion-variants"
+
 export default function BlogIndex({ data }) {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <>
+    <motion.div
+      key={"Blog"}
+      variants={fadeVariant}
+      initial="initial"
+      animate="enter"
+      exit="initial"
+    >
       <SEO title="Blog" />
       <h1>issa blog</h1>
 
@@ -21,7 +30,7 @@ export default function BlogIndex({ data }) {
           </Link>
         ))}
       </div>
-    </>
+    </motion.div>
   )
 }
 

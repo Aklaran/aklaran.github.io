@@ -1,5 +1,22 @@
-* {
-    color: $fg;
+a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+        color: $color4;
+    }
+
+    &:hover {
+        fill: $color4;
+    }
+}
+
+h1 a{
+    color: black;
+}
+
+h2 a{
+    color: black;
 }
 
 #card-heading {
@@ -16,9 +33,4 @@
     a {
         color: rgb(34, 194, 194);
     }
-}
-
-a {
-    color: $fg;
-    text-decoration: none;
 }
