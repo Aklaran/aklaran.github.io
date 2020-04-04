@@ -10,6 +10,7 @@ header {
 
     * {
         display: inline-block;
+        margin: 0;
     }
 }
 
@@ -24,7 +25,8 @@ header {
 }
 
 main {
-    flex: 0;
+    flex: 1;
     padding: 50px 0px;
-    margin: 0px 350px;
+    width: 600px;
+    margin: 0px auto;
 }
