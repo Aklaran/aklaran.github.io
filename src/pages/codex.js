@@ -13,7 +13,7 @@ const CodexPage = () => (
   variants={fadeVariant}
   initial="initial"
   animate="enter"
-  exit="exit"
+  exit="initial"
   >
     <SEO title="Home" />
     <h1>issa codex</h1>

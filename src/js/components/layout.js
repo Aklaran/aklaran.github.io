@@ -13,7 +13,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import Header from "./header"
 import "../../scss/main.scss"
 
-import { headerVariant, fadeVariant } from "../utils/motion-variants"
+import { fadeVariant } from "../utils/motion-variants"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

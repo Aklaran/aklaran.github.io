@@ -5,8 +5,22 @@
 }
 
 header {
-    margin: 50px auto;
-    text-align: center;
+    margin: 50px 350px;
+    text-align: justify;
+
+    * {
+        display: inline-block;
+    }
+}
+
+.header-left {
+    float: left;
+    text-align: left;
+}
+
+.header-right {
+    float: right;
+    text-align: right;
 }
 
 main {
