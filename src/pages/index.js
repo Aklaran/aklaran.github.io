@@ -4,39 +4,17 @@ import SEO from "../js/components/seo"
 import Image from "../js/components/image"
 import { motion, AnimatePresence } from "framer-motion"
 
-const duration = 0.5
-
-const variants = {
-  initial: {
-    opacity: 0,
-  },
-  enter: {
-    opacity: 1,
-    transition: {
-      duration: duration,
-      delay: duration,
-      when: 'beforeChildren',
-    },
-  },
-  exit: {
-    opacity: 0,
-    transition: { duration: duration },
-  },
-}
-
 const IndexPage = () => (
   <>
     <SEO title="Home" />
-    <AnimatePresence>
         <motion.div
+            id="image-container"
             key={"Home"}
-            variants={variants}
-            initial="initial"
-            animate="enter"
-            exit="exit">
+            initial={{opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0, transition: {duration: 0.5, delay: 0.5 }}}
+            exit={{ opacity: 0}}>
             <Image/>
         </motion.div>
-    </AnimatePresence>
   </>
 )
 
