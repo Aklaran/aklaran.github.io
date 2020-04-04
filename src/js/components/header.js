@@ -6,9 +6,10 @@ import Logo from "../../images/svg/wolf.svg"
 
 const Header = ({ siteTitle }) => (
   <header>
-
-      <Link to="/"><Logo height="45x" width="45px"/></Link>
-      <h2 style={{ margin: 0 }}>
+      <div className="header-left">
+        <Link to="/"><Logo height="45px" width="45px"/></Link>
+      </div>
+      <h2 className="header-right" style={{ margin: 0 }}>
         <Link to="/work">Work</Link>&nbsp;&nbsp;&nbsp;
         <Link to="/blog">Blog</Link>&nbsp;&nbsp;&nbsp;
         <Link to="/codex">Codex</Link>
