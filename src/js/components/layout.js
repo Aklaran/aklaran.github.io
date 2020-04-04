@@ -48,7 +48,6 @@ const Layout = ({ children, location }) => {
     <>
       <div id="flex-container">
         <motion.div
-          id="header"
           variants={variants}
           initial="initial"
           animate="enter"

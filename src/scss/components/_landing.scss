@@ -9,7 +9,13 @@
 
 }
 
+// .social-icon defines the motion.div that wraps the icons
 .social-icon {
     display: inline-block;
-    padding: 25px
+    padding: 25px;
+
+    // children actually define the icons themselves
+    :hover {
+        fill: $color3;
+    }
 }
