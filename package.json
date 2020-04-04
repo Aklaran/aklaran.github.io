@@ -25,7 +25,9 @@
     "react-helmet": "^5.2.1",
     "react-typography": "^0.16.19",
     "typography": "^0.16.19",
-    "typography-theme-irving": "^0.16.19"
+    "typography-theme-irving": "^0.16.19",
+    "typography-theme-kirkham": "^0.16.19",
+    "typography-theme-noriega": "^0.16.19"
   },
   "devDependencies": {
     "gh-pages": "^2.2.0",
