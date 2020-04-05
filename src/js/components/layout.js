@@ -26,6 +26,11 @@ const Layout = ({ children, location }) => {
            animate="enter"
            >
           <div id="bg-overlay"></div>
+          <footer>
+            <p className="footer">
+              © 2020 Bo Tembunkiart.&nbsp;&nbsp;&nbsp;Photography by <a href="https://www.gilbertfoto.com">Andy Gilbert Foto</a>
+            </p>
+          </footer>
         </motion.div>
       
     </>
