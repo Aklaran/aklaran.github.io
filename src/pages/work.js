@@ -7,6 +7,8 @@ import SEO from "../js/components/seo"
 import { motion } from "framer-motion"
 import { fadeVariant } from "../js/utils/motion-variants"
 
+import UnderConstruction from "../images/svg/under-construction.svg"
+
 const WorkPage = () => (
   <motion.div
   key={"Blog"}
@@ -16,11 +18,7 @@ const WorkPage = () => (
   exit="initial"
   >
     <SEO title="Home" />
-    <h1>issa portfolio</h1>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <UnderConstruction />
   </motion.div>
 )
 

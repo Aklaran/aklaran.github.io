@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 import SEO from "../js/components/seo"
 
@@ -10,37 +10,53 @@ import YoutubeIcon from "../images/svg/youtube.svg"
 
 // Animation Imports
 import { motion } from "framer-motion"
-import { landingContainerVariant, landingItemVariant } from "../js/utils/motion-variants"
+import { landingContainerVariant, landingItemVariant, landingHeaderVariant } from "../js/utils/motion-variants"
 
-const IndexPage = () => (
+function IndexPage() {
+  const [nameShown, setNameShown] = useState(false);
+
+  return (
   <>
-    <SEO title="Home" />
-        <motion.div
-          id="image-container"
-          key={"Home"}
-          variants={landingContainerVariant}
-          initial="hidden"
-          animate="show"
-          exit="hidden"
-        >
-          <motion.div variants={landingItemVariant}>
-            <Image/>
-          </motion.div>
+      <SEO title="Home" />
+      <div id="image-container">
+          <motion.h1
+            className="site-header"
+            variants={landingHeaderVariant}
+            initial="hidden"
+            animate={nameShown? "show" : "hidden"}
+          >
+            Aklaran
+          </motion.h1>
+          <motion.div
+            key={"Home"}
+            variants={landingContainerVariant}
+            initial="hidden"
+            animate="show"
+          >
+            <motion.div 
+              variants={landingItemVariant}
+              onMouseEnter={() => setNameShown(true)}
+              onMouseLeave={() => setNameShown(false)}
+            >
+              <Image/>
+            </motion.div>
 
-          <motion.div className="social-icon" variants={landingItemVariant}>
-            <a href="https://github.com/Aklaran"><GithubIcon height='45px' width='45px'/></a>
-          </motion.div>
+            <motion.div className="social-icon" variants={landingItemVariant}>
+              <a href="https://github.com/Aklaran"><GithubIcon height='45px' width='45px'/></a>
+            </motion.div>
 
-          <motion.div className="social-icon" variants={landingItemVariant}>
-            <a href="https://www.linkedin.com/in/siri-tembunkiart/"><LinkedInIcon height='45px' width='45px'/></a>
-          </motion.div>
+            <motion.div className="social-icon" variants={landingItemVariant}>
+              <a href="https://www.linkedin.com/in/siri-tembunkiart/"><LinkedInIcon height='45px' width='45px'/></a>
+            </motion.div>
 
-          <motion.div className="social-icon" variants={landingItemVariant}>
-            <a href="https://www.youtube.com/watch?v=hsJUNatpDNw"><YoutubeIcon height='45px' width='45px'/></a>
-          </motion.div>
+            <motion.div className="social-icon" variants={landingItemVariant}>
+              <a href="https://www.youtube.com/watch?v=hsJUNatpDNw"><YoutubeIcon height='45px' width='45px'/></a>
+            </motion.div>
 
-        </motion.div>
-  </>
-)
+          </motion.div>
+          </div>
+    </>
+  )
+}
 
 export default IndexPage
