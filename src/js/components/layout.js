@@ -18,31 +18,23 @@ const Layout = ({ children, location }) => {
   return (
     <>
       <div id="flex-container">
-        <motion.div
-          variants={fadeVariant}
-          initial="initial"
-          animate="enter"
-          >
+        <motion.div variants={fadeVariant} initial="initial" animate="enter">
           <Header atHome={location.pathname === "/"} />
         </motion.div>
 
         <main>
-          <AnimatePresence>
-            {children}
-          </AnimatePresence>
+          <AnimatePresence>{children}</AnimatePresence>
         </main>
-
       </div>
 
-        <motion.div
-           id="bg"
-           variants={fadeVariant}
-           initial="initial"
-           animate="enter"
-           >
-          <div id="bg-overlay"></div>
-        </motion.div>
-      
+      <motion.div
+        id="bg"
+        variants={fadeVariant}
+        initial="initial"
+        animate="enter"
+      >
+        <div id="bg-overlay"></div>
+      </motion.div>
     </>
   )
 }
