@@ -1,19 +1,29 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { motion } from "framer-motion"
 
 import PageCard from "../components/page-card"
+import { fadeVariant } from "../utils/motion-variants"
 
 export default function BlogTemplate({ data }) {
   const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
   return (
-    <PageCard title={frontmatter.title} date={frontmatter.date}>
+    <motion.div
+      key={"Blog"}
+      variants={fadeVariant}
+      initial="initial"
+      animate="enter"
+      exit="initial"
+    >
+      <PageCard title={frontmatter.title} date={frontmatter.date}>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-    </PageCard>
+      </PageCard>
+    </motion.div>
   )
 }
 
