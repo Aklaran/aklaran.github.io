@@ -12,7 +12,7 @@ const BlogPreview = ({ title, date, path, children }) => {
         <InnerWrapper>
           <h2>{title}</h2>
           <PreviewBody>{children}</PreviewBody>
-          <h5>Read more</h5>
+          <More>Read more</More>
         </InnerWrapper>
       </Link>
     </Wrapper>
@@ -41,6 +41,12 @@ const InnerWrapper = styled.div`
 
 const PreviewBody = styled.p`
   margin-block: 1.25rem;
+`
+
+const More = styled.h5`
+  &:hover {
+    color: ${COLORS.bordeaux};
+  }
 `
 
 export default BlogPreview
