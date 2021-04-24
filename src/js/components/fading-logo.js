@@ -3,12 +3,17 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { motion } from "framer-motion"
-import { headerLogoVariant } from "../utils/motion-variants"
+import {
+  primaryHeaderLogoVariant,
+  secondaryHeaderLogoVariant,
+  headerLogoImageVariant,
+} from "../utils/motion-variants"
 import { COLORS } from "../utils/constants"
 
 import Wolf from "../../images/akla_wolf.png"
+import BlackWolf from "../../images/svg/wolf.svg"
 
-function FadingLogo({ text }) {
+function FadingLogo({ text1, text2 }) {
   const [nameShown, setNameShown] = useState(false)
 
   return (
@@ -17,13 +22,31 @@ function FadingLogo({ text }) {
         onMouseEnter={() => setNameShown(true)}
         onMouseLeave={() => setNameShown(false)}
       >
-        <img src={Wolf} alt="Aklaran" height="50px" width="50px" />
+        <BlackWolf alt="Aklaran" height="50px" width="50px" />
+        <motion.img
+          variants={headerLogoImageVariant}
+          initial="hidden"
+          animate={nameShown ? "show" : "hidden"}
+          src={Wolf}
+          alt="Aklaran"
+          height="50px"
+          width="50px"
+          style={{ marginLeft: "-60px" }}
+        />
         <Name
-          variants={headerLogoVariant}
+          variants={secondaryHeaderLogoVariant}
           initial="hidden"
           animate={nameShown ? "show" : "hidden"}
         >
-          {text}
+          {text2}
+        </Name>
+        <Name
+          variants={primaryHeaderLogoVariant}
+          initial="show"
+          animate={nameShown ? "hidden" : "show"}
+          style={{ marginLeft: "-115px" }}
+        >
+          {text1}
         </Name>
       </Wrapper>
     </BareLink>
@@ -31,7 +54,8 @@ function FadingLogo({ text }) {
 }
 
 FadingLogo.propTypes = {
-  text: PropTypes.string,
+  text1: PropTypes.string,
+  text2: PropTypes.string,
 }
 
 const Wrapper = styled.div`

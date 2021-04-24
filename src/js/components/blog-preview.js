@@ -8,7 +8,7 @@ import { COLORS } from "../utils/constants"
 const BlogPreview = ({ title, date, path, children }) => {
   return (
     <Wrapper>
-      <Link to={path} style={{ "text-decoration": "none" }}>
+      <Link to={path} style={{ textDecoration: "none" }}>
         <InnerWrapper>
           <h2>{title}</h2>
           <PreviewBody>{children}</PreviewBody>
