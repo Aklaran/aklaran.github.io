@@ -4,8 +4,11 @@ import BlogPreview from "../js/components/blog-preview"
 import PropTypes from "prop-types"
 import { graphql, Link } from "gatsby"
 import { motion } from "framer-motion"
+import styled from "styled-components"
 
 import { fadeVariant } from "../js/utils/motion-variants"
+
+import { COLORS } from "../js/utils/constants"
 
 function Index({ data }) {
   const posts = data.allMarkdownRemark.edges
@@ -19,6 +22,7 @@ function Index({ data }) {
       exit="initial"
     >
       <SEO title="Blog" />
+      <Title>A collection of my more coherent thoughts</Title>
       <div>
         {posts.map(({ node: post }) => (
           <BlogPreview
@@ -36,6 +40,12 @@ function Index({ data }) {
 }
 
 Index.propTypes = {}
+
+const Title = styled.h5`
+  text-align: center;
+  text-transform: lowercase;
+  color: ${COLORS.bordeaux};
+`
 
 export const pageQuery = graphql`
   query BlogsQuery {
