@@ -13,7 +13,7 @@ import { fadeVariant } from "../utils/motion-variants"
 const Header = () => (
   <MaxWidthWrapper>
     <Wrapper variants={fadeVariant} initial="initial" animate="enter">
-      <FadingLogo text="Aklaran" />
+      <FadingLogo text1="Bo Tembunkiart" text2="Aklaran" />
       <FirstLink href="https://github.com/Aklaran">
         <GithubIcon height="30px" width="30px" />
       </FirstLink>
