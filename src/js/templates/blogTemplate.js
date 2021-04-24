@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { motion } from "framer-motion"
 
-import PageCard from "../components/page-card"
+import BlogPreview from "../components/blog-preview"
 import { fadeVariant } from "../utils/motion-variants"
 
 export default function BlogTemplate({ data }) {
@@ -17,12 +17,12 @@ export default function BlogTemplate({ data }) {
       animate="enter"
       exit="initial"
     >
-      <PageCard title={frontmatter.title} date={frontmatter.date}>
+      <BlogPreview title={frontmatter.title} date={frontmatter.date}>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
-      </PageCard>
+      </BlogPreview>
     </motion.div>
   )
 }

@@ -37,6 +37,7 @@ FadingLogo.propTypes = {
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
+  gap: 10px;
 `
 
 const Name = styled(motion.h1)`
