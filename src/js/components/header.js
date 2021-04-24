@@ -51,6 +51,7 @@ const Wrapper = styled.header`
   padding: 18px;
   max-width: 1200px;
   margin-inline: auto;
+  margin-bottom: 90px;
 `
 
 const SocialLink = styled.a`
