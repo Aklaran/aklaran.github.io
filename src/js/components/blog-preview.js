@@ -7,13 +7,15 @@ import { COLORS } from "../utils/constants"
 
 const BlogPreview = ({ title, date, path, children }) => {
   return (
-    <Link to={path} style={{ "text-decoration": "none" }}>
-      <Wrapper>
-        <h1>{title}</h1>
-        <PreviewBody>{children}</PreviewBody>
-        <h5>Read more</h5>
-      </Wrapper>
-    </Link>
+    <Wrapper>
+      <Link to={path} style={{ "text-decoration": "none" }}>
+        <InnerWrapper>
+          <h2>{title}</h2>
+          <PreviewBody>{children}</PreviewBody>
+          <h5>Read more</h5>
+        </InnerWrapper>
+      </Link>
+    </Wrapper>
   )
 }
 
@@ -27,9 +29,12 @@ const Wrapper = styled.div`
   max-width: 600px;
   margin-inline: auto;
   margin-block: 100px;
+`
+
+const InnerWrapper = styled.div`
   color: black;
 
-  &:hover > h1 {
+  &:hover > h2 {
     color: ${COLORS.bordeaux};
   }
 `

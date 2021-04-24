@@ -20,15 +20,11 @@ import { fadeVariant } from "../utils/motion-variants"
 const Layout = ({ children, location }) => {
   return (
     <>
-      <div id="flex-container">
-        <motion.div variants={fadeVariant} initial="initial" animate="enter">
-          <Header atHome={location.pathname === "/"} />
-        </motion.div>
+      <Header />
 
-        <main>
-          <AnimatePresence>{children}</AnimatePresence>
-        </main>
-      </div>
+      <main>
+        <AnimatePresence>{children}</AnimatePresence>
+      </main>
 
       <Background variants={fadeVariant} initial="initial" animate="enter">
         <BackgroundOverlay />
