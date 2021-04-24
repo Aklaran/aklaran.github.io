@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { motion } from "framer-motion"
 
-import BlogPreview from "../components/blog-preview"
+import Blog from "../components/blog-full"
 import { fadeVariant } from "../utils/motion-variants"
 
 export default function BlogTemplate({ data }) {
@@ -17,12 +17,11 @@ export default function BlogTemplate({ data }) {
       animate="enter"
       exit="initial"
     >
-      <BlogPreview title={frontmatter.title} date={frontmatter.date}>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-      </BlogPreview>
+      <Blog
+        title={frontmatter.title}
+        date={frontmatter.date}
+        content={html}
+      ></Blog>
     </motion.div>
   )
 }
