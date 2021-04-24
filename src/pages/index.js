@@ -31,7 +31,7 @@ function Index({ data }) {
             path={post.frontmatter.path}
             key={post.frontmatter.path}
           >
-            {post.excerpt}
+            {post.frontmatter.blurb}
           </BlogPreview>
         ))}
       </div>
@@ -59,8 +59,8 @@ export const pageQuery = graphql`
             title
             path
             date
+            blurb
           }
-          excerpt
         }
       }
     }
