@@ -45,12 +45,18 @@ const Wrapper = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  gap: 11px;
   padding-top: 18px;
   padding-bottom: 36px;
   max-width: 1250px;
-  margin-inline: auto;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
   margin-bottom: 90px;
+
+  // https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
+  // Because flex gap isn't supported on Safari yet >.<
+  & > * + * {
+    margin-left: 11px;
+  }
 `
 
 const SocialLink = styled.a`
