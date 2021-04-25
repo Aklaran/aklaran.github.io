@@ -1,8 +1,7 @@
 import React from "react"
-import SEO from "../js/components/seo"
+import Seo from "../js/components/seo"
 import BlogPreview from "../js/components/blog-preview"
-import PropTypes from "prop-types"
-import { graphql, Link } from "gatsby"
+import { graphql } from "gatsby"
 import { motion } from "framer-motion"
 import styled from "styled-components"
 
@@ -21,7 +20,7 @@ function Index({ data }) {
       animate="enter"
       exit="initial"
     >
-      <SEO title="Blog" />
+      <Seo title="Blog" />
       <Title>A collection of my more coherent thoughts</Title>
       <div>
         {posts.map(({ node: post }) => (

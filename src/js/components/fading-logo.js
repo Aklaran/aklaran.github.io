@@ -8,7 +8,6 @@ import {
   secondaryHeaderLogoVariant,
   headerLogoImageVariant,
 } from "../utils/motion-variants"
-import { COLORS } from "../utils/constants"
 
 import Wolf from "../../images/akla_wolf.png"
 import BlackWolf from "../../images/svg/wolf.svg"

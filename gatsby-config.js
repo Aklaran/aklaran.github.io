@@ -1,10 +1,14 @@
 module.exports = {
+  flags: {
+    DEV_SSR: true,
+  },
   siteMetadata: {
     title: `Aklaran's Voyage`,
     description: `Is it cool if I have no idea what I'm doing? Cool.`,
     author: `@aklaran`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -46,9 +50,9 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: `${__dirname}/src/images/svg`
-        }
-      }
-    }
+          include: `${__dirname}/src/images/svg`,
+        },
+      },
+    },
   ],
 }
