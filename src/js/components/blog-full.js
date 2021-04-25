@@ -13,6 +13,7 @@ function Blog({ title, date, content }) {
         <Date>{date}</Date>
         <Content dangerouslySetInnerHTML={{ __html: content }} />
       </Wrapper>
+      <Spacer />
     </>
   )
 }
@@ -24,7 +25,8 @@ Blog.propTypes = {
 
 const Wrapper = styled.div`
   max-width: 700px;
-  margin-inline: auto;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
   margin-bottom: 25rem;
 `
 
@@ -54,7 +56,6 @@ const Content = styled.article`
   & > blockquote {
     border-left: 3px solid ${COLORS.bordeaux};
     color: ${COLORS.gray700};
-    font-size: 0.9rem;
     font-style: italic;
     margin-bottom: 1.618rem;
     margin-left: 4rem;
@@ -82,6 +83,10 @@ const Content = styled.article`
       font-size: 3rem;
     }
   }
+`
+
+const Spacer = styled.div`
+  height: 1px;
 `
 
 export default Blog

@@ -27,8 +27,7 @@ BlogPreview.propTypes = {
 
 const Wrapper = styled.div`
   max-width: 600px;
-  margin-inline: auto;
-  margin-block: 100px;
+  margin: 100px auto;
 `
 
 const InnerWrapper = styled.div`
@@ -40,7 +39,8 @@ const InnerWrapper = styled.div`
 `
 
 const PreviewBody = styled.p`
-  margin-block: 1.25rem;
+  margin-block-start: 1.25rem;
+  margin-block-end: 1.25rem;
 `
 
 const More = styled.h5`

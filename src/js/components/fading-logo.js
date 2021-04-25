@@ -16,12 +16,12 @@ function FadingLogo({ text1, text2 }) {
   const [nameShown, setNameShown] = useState(false)
 
   return (
-    <BareLink to="/">
-      <Wrapper
-        onMouseEnter={() => setNameShown(true)}
-        onMouseLeave={() => setNameShown(false)}
-      >
-        <BlackWolf alt="Aklaran" height="50px" width="50px" />
+    <BareLink
+      to="/"
+      onMouseEnter={() => setNameShown(true)}
+      onMouseLeave={() => setNameShown(false)}
+    >
+      <Overlay>
         <motion.img
           variants={headerLogoImageVariant}
           initial="hidden"
@@ -30,7 +30,6 @@ function FadingLogo({ text1, text2 }) {
           alt="Aklaran"
           height="50px"
           width="50px"
-          style={{ marginLeft: "-60px" }}
         />
         <Name
           variants={secondaryHeaderLogoVariant}
@@ -39,11 +38,13 @@ function FadingLogo({ text1, text2 }) {
         >
           {text2}
         </Name>
+      </Overlay>
+      <Wrapper>
+        <BlackWolf alt="Aklaran" height="50px" width="50px" />
         <Name
           variants={primaryHeaderLogoVariant}
           initial="show"
           animate={nameShown ? "hidden" : "show"}
-          style={{ marginLeft: "-115px" }}
         >
           {text1}
         </Name>
@@ -60,7 +61,18 @@ FadingLogo.propTypes = {
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
+
+  // https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
+  // Because flex gap isn't supported on Safari yet >.<
+  & > * + * {
+    margin-left: 10px;
+  }
+`
+
+const Overlay = styled(Wrapper)`
+  position: absolute;
+  top: 0;
+  left: 0;
 `
 
 const Name = styled(motion.h1)`
@@ -69,6 +81,7 @@ const Name = styled(motion.h1)`
 
 const BareLink = styled(Link)`
   text-decoration: none;
+  position: relative;
 `
 
 export default FadingLogo

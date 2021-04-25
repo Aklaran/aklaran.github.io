@@ -3,7 +3,7 @@ module.exports = {
     DEV_SSR: true,
   },
   siteMetadata: {
-    title: `Aklaran's Voyage`,
+    title: `Bo Tembunkiart`,
     description: `Is it cool if I have no idea what I'm doing? Cool.`,
     author: `@aklaran`,
   },
@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Aklaran's Voyage`,
+        name: `Bo Tembunkiart`,
         short_name: `Aklaran`,
         start_url: `/`,
         background_color: `#932354`,
