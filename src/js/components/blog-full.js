@@ -24,9 +24,6 @@ Blog.propTypes = {
 }
 
 const Wrapper = styled.div`
-  max-width: 700px;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
   margin-bottom: 25rem;
 `
 
@@ -37,6 +34,9 @@ const Title = styled.h1`
 `
 
 const Date = styled.h6`
+  max-width: 800px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
   color: ${COLORS.gray700};
   margin-bottom: 2.427rem;
 `
@@ -45,6 +45,9 @@ const Content = styled.article`
   line-height: 1.618rem;
 
   & > p {
+    max-width: 800px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
     margin-bottom: 1.618rem;
 
     & > a {
@@ -82,6 +85,11 @@ const Content = styled.article`
       font-style: normal;
       font-size: 3rem;
     }
+  }
+
+  // TODO: get this selector to work and make images 100vh while maintaining aspect ratio
+  & > span > a > img {
+    width: 500px;
   }
 `
 
