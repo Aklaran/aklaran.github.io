@@ -45,10 +45,9 @@ const Background = styled(motion.div)`
   height: 100%;
   z-index: -2;
 
-  background-image: url(${backgroundImage});
   background-size: cover;
   background-position: center center;
-  background-color: black;
+  background-color: white;
 `
 
 const BackgroundOverlay = styled.div`
