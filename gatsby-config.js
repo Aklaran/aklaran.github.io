@@ -27,14 +27,13 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [
-          {
-            resolve: 'gatsby-remark-images',
-            options: {
-              maxWidth: 8000
-            }
+        plugins: [{
+          resolve: 'gatsby-remark-images',
+          options: {
+            maxWidth: 8000
           }
-        ]
+        }, 
+        'gatsby-remark-unwrap-images']
       }
     },
     `gatsby-transformer-sharp`,
