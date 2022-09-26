@@ -44,6 +44,7 @@ const Title = styled.h5`
   text-align: center;
   text-transform: lowercase;
   color: ${COLORS.bordeaux};
+  font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 `
 
 export const pageQuery = graphql`

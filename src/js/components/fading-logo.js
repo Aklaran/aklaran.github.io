@@ -77,6 +77,7 @@ const Overlay = styled(Wrapper)`
 
 const Name = styled(motion.h1)`
   color: black;
+  font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 `
 
 const BareLink = styled(Link)`
