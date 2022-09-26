@@ -11,4 +11,4 @@ This is an blog post that I'll write about how amazing my summer 2022 was. I wan
 
 And of course, no blog would be complete without some images in portrait. Let's see how this one fares!
 
-![A cliff on Kyes Peak](../images/kyes-bw.jpg)
+![A cliff on Kyes Peak](../images/kyes-bw.jpg '#width=700px;margin-left=auto;margin-right=auto;')
