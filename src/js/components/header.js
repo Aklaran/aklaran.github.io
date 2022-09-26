@@ -10,23 +10,29 @@ import YoutubeIcon from "../../images/svg/youtube.svg"
 import { COLORS } from "../utils/constants"
 import { fadeVariant } from "../utils/motion-variants"
 
+import Headroom from "react-headroom";
+
 const Header = () => (
-  <MaxWidthWrapper>
-    <Wrapper variants={fadeVariant} initial="initial" animate="enter">
-      <FadingLogo text1="Bo Tembunkiart" text2="Aklaran" />
-      <FirstLink href="https://github.com/Aklaran">
-        <GithubIcon height="30px" width="30px" />
-      </FirstLink>
+  <Headroom 
+    upTolerance={10} 
+    downTolerance={2}>
+    <MaxWidthWrapper>
+      <Wrapper variants={fadeVariant} initial="initial" animate="enter">
+        <FadingLogo text1="Bo Tembunkiart" text2="Aklaran" />
+        <FirstLink href="https://github.com/Aklaran">
+          <GithubIcon height="30px" width="30px" />
+        </FirstLink>
 
-      <SocialLink href="https://www.linkedin.com/in/siri-tembunkiart/">
-        <LinkedInIcon height="30px" width="30px" />
-      </SocialLink>
+        <SocialLink href="https://www.linkedin.com/in/siri-tembunkiart/">
+          <LinkedInIcon height="30px" width="30px" />
+        </SocialLink>
 
-      <SocialLink href="https://www.youtube.com/watch?v=hsJUNatpDNw">
-        <YoutubeIcon height="30px" width="30px" />
-      </SocialLink>
-    </Wrapper>
-  </MaxWidthWrapper>
+        <SocialLink href="https://www.youtube.com/watch?v=hsJUNatpDNw">
+          <YoutubeIcon height="30px" width="30px" />
+        </SocialLink>
+      </Wrapper>
+    </MaxWidthWrapper>
+  </Headroom>
 )
 
 const MaxWidthWrapper = styled(motion.header)`
@@ -36,7 +42,7 @@ const MaxWidthWrapper = styled(motion.header)`
   background-image: linear-gradient(
     to top,
     rgba(242, 242, 242, 0),
-    rgba(242, 242, 242, 1) 30%
+    rgba(242, 242, 242, 1) 40%
   );
 `
 
