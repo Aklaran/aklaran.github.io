@@ -36,6 +36,7 @@ const Title = styled.h1`
   text-align: center;
   margin-bottom: 4.428rem;
   font-size: 3rem;
+  font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 `
 
 const Date = styled.h6`
@@ -44,6 +45,7 @@ const Date = styled.h6`
   margin-inline-end: auto;
   color: ${COLORS.gray700};
   margin-bottom: .618rem;
+  font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 `
 
 const Content = styled.article`
@@ -54,6 +56,7 @@ const Content = styled.article`
     margin-inline-start: auto;
     margin-inline-end: auto;
     margin-bottom: 1.618rem;
+    font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 
     & > a {
       color: ${COLORS.bordeaux};
