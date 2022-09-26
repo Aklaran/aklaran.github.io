@@ -32,7 +32,13 @@ module.exports = {
           options: {
             maxWidth: 8000
           }
-        }, 
+        },
+        {
+          resolve: `gatsby-remark-image-attributes`,
+          options: {
+            dataAttributes: true
+          }
+        },
         'gatsby-remark-unwrap-images']
       }
     },
