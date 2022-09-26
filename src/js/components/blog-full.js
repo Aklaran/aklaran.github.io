@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 import { COLORS } from "../utils/constants"
+import SubscriptionForm from "./sub-form"
 
 function Blog({ title, date, content }) {
   return (
@@ -13,6 +14,7 @@ function Blog({ title, date, content }) {
         <Date>{date}</Date>
         <Content dangerouslySetInnerHTML={{ __html: content }} />
       </Wrapper>
+      <SubscriptionForm />
       <Spacer />
     </>
   )
@@ -24,7 +26,7 @@ Blog.propTypes = {
 }
 
 const Wrapper = styled.div`
-  margin-bottom: 25rem;
+  margin-bottom: 5rem;
 `
 
 const Title = styled.h1`
