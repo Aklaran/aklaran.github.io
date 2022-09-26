@@ -24,7 +24,24 @@ module.exports = {
         path: `${__dirname}/src/md`,
       },
     },
-    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [{
+          resolve: 'gatsby-remark-images',
+          options: {
+            maxWidth: 8000
+          }
+        },
+        {
+          resolve: `gatsby-remark-image-attributes`,
+          options: {
+            dataAttributes: true
+          }
+        },
+        'gatsby-remark-unwrap-images']
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -39,7 +56,7 @@ module.exports = {
         icon: `src/images/akla_wolf.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-sass`,
+    `gatsby-plugin-sass`, 
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
