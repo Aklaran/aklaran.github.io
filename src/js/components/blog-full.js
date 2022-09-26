@@ -30,8 +30,11 @@ const Wrapper = styled.div`
 `
 
 const Title = styled.h1`
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-  margin-bottom: 4.854rem;
+  margin-bottom: 4.428rem;
   font-size: 3rem;
 `
 
@@ -40,7 +43,7 @@ const Date = styled.h6`
   margin-inline-start: auto;
   margin-inline-end: auto;
   color: ${COLORS.gray700};
-  margin-bottom: 2.427rem;
+  margin-bottom: .618rem;
 `
 
 const Content = styled.article`
