@@ -1,6 +1,6 @@
 ---
 path: "/blog/circles-of-influence"
-date: "2022-04-24"
+date: "2021-04-24"
 title: "Circles of Influence"
 blurb: "How am I going to help the world if I can't even help myself?"
 ---

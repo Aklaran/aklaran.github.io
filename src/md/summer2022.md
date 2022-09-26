@@ -1,5 +1,5 @@
 ---
-path: "/blog/summer2020"
+path: "/blog/summer2022"
 date: "2022-09-17"
 title: "This summer showed me how amazing the Cascades truly are."
 blurb: "Why am I leaving again?"
