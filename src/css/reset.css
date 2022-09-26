@@ -53,7 +53,6 @@ ol,
 ul,
 li,
 fieldset,
-form,
 label,
 legend,
 table,
@@ -136,4 +135,9 @@ html,
 body,
 #root {
   height: 100%;
+}
+
+/* Janky solution to get convertkit-react to render properly */
+form {
+  margin: auto;
 }
