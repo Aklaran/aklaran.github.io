@@ -30,7 +30,8 @@ module.exports = {
         plugins: [{
           resolve: 'gatsby-remark-images',
           options: {
-            maxWidth: 8000
+            maxWidth: 8000,
+            showCaptions: ['alt']
           }
         },
         {
