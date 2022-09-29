@@ -6,7 +6,7 @@ blurb: "It's what these boots were made for."
 ---
 
 I remember one English assignment in high school where we had to write a short story following the archetype of the Hero's Journey. It's the story we all know and love: our protagonist, called to adventure, becomes the hero of their world through extraordinary feats. A critical component of this story is the call: something, usually a catastrophic loss or change of circumstance, gets the hero off their ass and on the path to transformation. Odysseus is called to fight the Trojans and forsaken by his gods. Luke is pulled from Tatooine by Padme's distress call. Nemo touches the butt. I remember not doing that well on that assignment; my hero didn't have any cataclysm with which to contend, he just kind of... wandered off.
-ç
+
 And that's what my life, for the most part, has pretty much been like. I'm lucky to say that I've been sheltered from a number of possible cataclysms, but I also know that those very upheavals are the impetus to growth. Without change, I can feel myself stagnate, wearing down the same familiar grooves of hedonism and doom-scrolling in complete comfort while opportunities to do good near and subsequently pass me.
 
 So I wander.
