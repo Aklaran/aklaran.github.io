@@ -64,6 +64,25 @@ const Content = styled.article`
     }
   }
 
+  & > h1 {
+    max-width: 800px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    margin-bottom: 1.618rem;
+    margin-top: 4.8rem;
+    font-size:2rem;
+    text-align:center;
+  }
+
+  & > span {
+    margin-bottom: 1.618rem;
+  }
+  
+  & figcaption {
+    text-align: center;
+    color: ${COLORS.gray500}
+  }
+
   & > blockquote {
     border-left: 3px solid ${COLORS.bordeaux};
     color: ${COLORS.gray700};
