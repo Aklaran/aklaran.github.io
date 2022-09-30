@@ -40,6 +40,7 @@ const Title = styled.h1`
 `
 
 const Date = styled.h6`
+  width: 90%;
   max-width: 800px;
   margin-inline-start: auto;
   margin-inline-end: auto;
@@ -52,6 +53,7 @@ const Content = styled.article`
   line-height: 1.618rem;
 
   & > p {
+    width: 90%;
     max-width: 800px;
     margin-inline-start: auto;
     margin-inline-end: auto;
@@ -65,6 +67,7 @@ const Content = styled.article`
   }
 
   & > h1 {
+    width: 90%;
     max-width: 800px;
     margin-inline-start: auto;
     margin-inline-end: auto;
@@ -79,6 +82,10 @@ const Content = styled.article`
   }
   
   & figcaption {
+    width: 90%;
+    max-width: 800px;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
     text-align: center;
     color: ${COLORS.gray500}
   }

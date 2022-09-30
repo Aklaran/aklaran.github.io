@@ -23,17 +23,17 @@ As soon as I started university after my time in Thailand, I knew that I had to 
 
 As for where, I'm going to Nepal. That's it that's all. I'm actually writing this on the plane. And why Nepal? Well.
 
-![Struggling to comprehend the majesty of Dakobed from White Pass](../images/dakobed.jpg '#width=100%')
+![Struggling to comprehend the majesty of Dakobed from White Pass (pc: Jacob)](../images/dakobed.jpg '#width=100%')
 
 # The Relentless Pursuit of Local Maxima
 
 My sister Julie was the first to get me out hiking, and she's always been my backcountry partner. Even before this year, we'd done some really cool stuff; my favorite was Cascade Mountain in Banff. She's also been trying to get me to climb for as long as I can remember, taking me to Earth Treks out in Crystal City, VA to boulder a few times, but for some reason it never caught on. I told myself it was because I had to keep my nails manicured for guitar, but that was a flimsy excuse. I hardly ever practiced anyway.
 
-![Julie and Greg hustle down Old Chutes on Mt. Hood](../images/hood.jpg '#width=100%;max-width=800px;margin-left=auto;margin-right=auto;')
+![Julie and Greg hustle down Old Chute on Mt. Hood](../images/hood.jpg '#width=100%;max-width=800px;margin-left=auto;margin-right=auto;')
 
 But something stirred when I came out to Seattle for the first time in 2019. I hadn't ever before had such easy access to the mountains, and the jagged granite spires of the Cascades are unambiguously beautiful. I knew I wanted to expand my scope of adventure, so I signed Julie, Greg, and me up for a crevasse rescue class in 2021 so we could take on some glaciers like Mount Rainier and Dakobed, but after one failed attempt at the latter, the season was already over. Finally, last August, at my wonderful girlfriend Lindsay's advice, I took the leap, got a climbing gym membership, and immediately became completely obsessed. The time since then has been a dogged rush to catch up with the experience I missed by starting so late. I managed several summits and found great friends and powerful experiences there, on Rainier, Dakobed, Hood, Ruth, Ingalls, and many others.
 
-![Placing a piece on pitch 2 (5.6) of Pisces at the Index Town Wall](../images/pisces.jpg '#width=100%;max-width=600px;margin-left=auto;margin-right=auto;')
+![Placing a cam for protection on pitch 2 (5.6) of Pisces at the Index Town Wall (pc: Lani)](../images/pisces.jpg '#width=100%;max-width=600px;margin-left=auto;margin-right=auto;')
 
 The question, "Why climb?" has gnawed at me since I began, and I'm still working on my answer. The magnitude of unmitigable risk we take on whenever we go into the mountains is staggering, no one can deny that, but so too is the majesty of these timeless cathedrals of rock. To rope up is to step into the ring with an ancient force of nature, a progenitor of entire ecosystems, an expression of Earth's awful might. To climb is to spar with Titans. It is beautiful and terrifying. Maybe I climb as a way to feel powerful, to forget how small I am. Or maybe I climb to remember exactly that. Maybe I climb as spiritual expression, to feel closer to my home planet as it feels we as a species are pushing it away. I don't know really, but I know that for some reason I just have to. Nepal seemed to me an opportunity to commune with the greatest titans we have, the (relatively) young guns of the Himalaya, and to see how the communities that live with them internalize the lessons they have to teach.
 
