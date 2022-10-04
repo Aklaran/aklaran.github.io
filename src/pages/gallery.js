@@ -10,7 +10,10 @@ import { fadeVariant } from "../js/utils/motion-variants"
 import { COLORS } from "../js/utils/constants"
 
 function PhotoDump({ data }) {
-    const images = data.allFile.edges.map(({ node }) => node.childImageSharp)
+    const images = data.allImageSharp.edges.map(({ node }) => ({
+        ...node,
+        caption: node.fields.exif.raw.image.ImageDescription
+    }))
 
     return (
         <motion.div
@@ -35,22 +38,27 @@ const Title = styled.h5`
 `
 
 export const pageQuery = graphql`
-  query ImagesForGallery {
-    allFile(filter: {extension: {eq: "jpg"}}) {
+query ImagesForGallery {
+    allImageSharp(
+      filter: {fields: {exif: {raw: {image: {ImageDescription: {ne: null}}}}}}
+    ) {
       edges {
         node {
-          childImageSharp {
-            thumb: gatsbyImageData(
-              width: 270
-              height: 270
-              placeholder: BLURRED
-            )
-            full: gatsbyImageData(layout: FULL_WIDTH)
+          thumb: gatsbyImageData(width: 270, height: 270, placeholder: BLURRED)
+          full: gatsbyImageData(layout: FULL_WIDTH)
+          fields {
+            exif {
+              raw {
+                image {
+                  ImageDescription
+                }
+              }
+            }
           }
         }
       }
     }
-  }
+  }  
 `
 
 export default PhotoDump
