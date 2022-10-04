@@ -12,7 +12,6 @@ import styled from "styled-components"
 
 import Header from "./header"
 import "../../css/reset.css"
-import backgroundImage from "../../images/the_glacier_above.jpg"
 import { COLORS } from "../utils/constants"
 
 import { fadeVariant } from "../utils/motion-variants"
