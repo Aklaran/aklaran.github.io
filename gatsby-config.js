@@ -45,6 +45,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     'gatsby-plugin-image',
+    'gatsby-plugin-sharp-exif',
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
