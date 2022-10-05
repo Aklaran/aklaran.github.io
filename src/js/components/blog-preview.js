@@ -41,6 +41,7 @@ const InnerWrapper = styled.div`
 const PreviewBody = styled.p`
   margin-block-start: 1.25rem;
   margin-block-end: 1.25rem;
+  line-height: 1.5rem;
 `
 
 const More = styled.h5`

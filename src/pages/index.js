@@ -22,7 +22,7 @@ function Index({ data }) {
     >
       <Seo title="Blog" />
       <Title>A collection of my more coherent thoughts</Title>
-      <div>
+      <SummaryList>
         {posts.map(({ node: post }) => (
           <BlogPreview
             title={post.frontmatter.title}
@@ -33,7 +33,7 @@ function Index({ data }) {
             {post.frontmatter.blurb}
           </BlogPreview>
         ))}
-      </div>
+      </SummaryList>
     </motion.div>
   )
 }
@@ -45,6 +45,12 @@ const Title = styled.h5`
   text-transform: lowercase;
   color: ${COLORS.bordeaux};
   font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+`
+
+const SummaryList = styled.div`
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 `
 
 export const pageQuery = graphql`

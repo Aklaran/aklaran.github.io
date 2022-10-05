@@ -24,17 +24,26 @@ function PhotoDump({ data }) {
         exit="initial"
         >
         <Seo title="Gallery" />
-        <Title>Le Galerie</Title>
-        <Gallery images={images} />
+        <MaxWidthWrapper>
+          <Title>it's like instagram but i don't have to care about how few followers i have</Title>
+          <Gallery images={images} />
+        </MaxWidthWrapper>
         </motion.div>
     )
 }
+
+const MaxWidthWrapper = styled.div`
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+`
 
 const Title = styled.h5`
   text-align: center;
   text-transform: lowercase;
   color: ${COLORS.bordeaux};
   font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  margin-bottom: 4rem;
 `
 
 export const pageQuery = graphql`
