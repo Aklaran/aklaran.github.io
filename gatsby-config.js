@@ -3,7 +3,7 @@ module.exports = {
     DEV_SSR: true,
   },
   siteMetadata: {
-    title: `Bo Tembunkiart`,
+    title: `Bo`,
     description: `Is it cool if I have no idea what I'm doing? Cool.`,
     author: `@aklaran`,
   },
@@ -50,7 +50,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Bo Tembunkiart`,
+        name: `Bo`,
         short_name: `Aklaran`,
         start_url: `/`,
         background_color: `#932354`,
