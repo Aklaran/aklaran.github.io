@@ -11,6 +11,7 @@ import { COLORS } from "../utils/constants"
 import { fadeVariant } from "../utils/motion-variants"
 
 import Headroom from "react-headroom";
+import { Link } from "gatsby"
 
 const Header = () => (
   <Headroom 
@@ -18,8 +19,11 @@ const Header = () => (
     downTolerance={2}>
     <MaxWidthWrapper>
       <Wrapper variants={fadeVariant} initial="initial" animate="enter">
-        <FadingLogo text1="Bo Tembunkiart" text2="Aklaran" />
-        <FirstLink href="https://github.com/Aklaran">
+        <FadingLogo text1="Bo" text2="Aklaran" />
+
+        <FirstTextLink to="/gallery/"><h2>Gallery</h2></FirstTextLink>
+
+        {/* <FirstLink href="https://github.com/Aklaran">
           <GithubIcon height="30px" width="30px" />
         </FirstLink>
 
@@ -29,7 +33,7 @@ const Header = () => (
 
         <SocialLink href="https://www.youtube.com/watch?v=hsJUNatpDNw">
           <YoutubeIcon height="30px" width="30px" />
-        </SocialLink>
+</SocialLink> */}
       </Wrapper>
     </MaxWidthWrapper>
   </Headroom>
@@ -54,6 +58,7 @@ const Wrapper = styled.div`
   padding-top: 18px;
   padding-bottom: 36px;
   max-width: 1250px;
+  width: 90%;
   margin-inline-start: auto;
   margin-inline-end: auto;
   margin-bottom: 90px;
@@ -72,6 +77,19 @@ const SocialLink = styled.a`
 `
 
 const FirstLink = styled(SocialLink)`
+  margin-left: auto;
+`
+
+const TextLink = styled(Link)`
+  text-decoration: none;
+  color: black;
+  font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  &:hover {
+    color: ${COLORS.bordeaux};
+  }
+`
+
+const FirstTextLink = styled(TextLink)`
   margin-left: auto;
 `
 

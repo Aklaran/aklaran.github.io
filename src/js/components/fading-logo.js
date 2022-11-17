@@ -65,7 +65,7 @@ const Wrapper = styled.div`
   // https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/
   // Because flex gap isn't supported on Safari yet >.<
   & > * + * {
-    margin-left: 10px;
+    margin-left: 11px;
   }
 `
 
