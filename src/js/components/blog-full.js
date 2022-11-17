@@ -1,11 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
+import { Disqus } from "gatsby-plugin-disqus"
 
 import { COLORS } from "../utils/constants"
 import SubscriptionForm from "./sub-form"
 
-function Blog({ title, date, content }) {
+function Blog({ path, title, date, content }) {
   return (
     <>
       <Title>{title}</Title>
@@ -13,6 +14,18 @@ function Blog({ title, date, content }) {
       <Wrapper>
         <Date>{date}</Date>
         <Content dangerouslySetInnerHTML={{ __html: content }} />
+        <Comments>
+          <Disqus
+            config={{
+                /* Replace PAGE_URL with your post's canonical URL variable */
+                url: "https://botembunki.art" + path,
+                /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+                identifier: path,
+                /* Replace PAGE_TITLE with the title of the page */
+                title: title,
+            }}
+            /> 
+        </Comments>
       </Wrapper>
       <SubscriptionForm />
       <Spacer />
@@ -129,6 +142,13 @@ const Content = styled.article`
 
 const Spacer = styled.div`
   height: 1px;
+`
+
+const Comments = styled.div`
+  width: 90%;
+  max-width: 800px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
 `
 
 export default Blog

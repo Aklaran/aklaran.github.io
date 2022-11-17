@@ -19,6 +19,7 @@ export default function BlogTemplate({ data }) {
     >
       <Blog
         title={frontmatter.title}
+        path={frontmatter.path}
         date={frontmatter.date}
         content={html}
       ></Blog>
