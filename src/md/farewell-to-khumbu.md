@@ -1,11 +1,11 @@
 ---
-path: "/blog/farewell-to-khumbu"
+path: "/blog/himalayan-winter"
 date: "2023-01-15"
-title: "A Farewell to Khumbu"
-blurb: "Misery and Bliss in the Canopy of the World"
+title: "Himalayan Winter"
+blurb: "Bliss and Misery in the Canopy of the World"
 ---
 
-I'm finding vignettes the easiest to write as of now, so in lieu of giving you the entire chronology of the past few months in prose, I'll just put it here for context. The stories below might jump around a bit, but here's what went down:
+I'm finding vignettes the easiest to write as of now, so I'll give you the chronology of the past few months here for context. The stories below might jump around a bit, but here's what went down:
 
 End of October - Beginning of November: Spent 8 days at a monastery in the village of Panggom during a 10-day long puja ceremony.
 
@@ -21,11 +21,11 @@ As always, check out the gallery for more pictures!
 
 # Ceremony
 
-![The Tashi Sangag Chholing Gumba framed against a perfect sunset.](../images/20221031-inbetween-time-0586-blog.jpg '#width=100%')
+![The Tashi Sangag Chholing Gumba framed against a rare cloudless sunset.](../images/20221031-inbetween-time-0586-blog.jpg '#width=100%')
 
 From the outside, a puja is a stolid, intimidating affair. From 5:30 in the morning until dinner, muttered prayers resound through loudspeakers and echo down into the village of Panggom as thirty monks gather in the main hall of the Tashi Sangag Chholing Monastery. Each moment is draped in ceremony: young monks build and place effigies, others swing pots of burning incense to purify the room, still others carefully place offerings at the feet of massive statues to Buddha, Avalokitsvara, and Guru Padmasambhava. Endless moments pass in trance-like concentration as the chanting mounts to a crescendo, until it all at once dissolves into the clamorous exhaltation of thundering horns, flutes, cymbals, and the beating of the drum.
 
-After four days at the monastery, I had only just summoned up the courage to take part in the proceedings. Taking a deep breath, I took off my shoes and entered the hall. Before the two head monks of the village and the Lord Buddha glittering in gold, I paid my respects. Three times I raised my pressed palms to my forehead, brought them down to my chest, then knelt and touched my head to the floor. I heard giggling from the young novices and flushed red; I'd made a mistake. I was supposed to touch my hands to my chin, too. I looked around, but if any others had noticed my blunder, no one seemed to care. Lhakpa Kaji, the youngest of the novices and ever the trouble maker, was paying his own respects, and as he bowed he kept stealing glances at me and giggling. I took my camera out photograph him. Seeing the camera, Serzhang, the teacher of the monastery, motioned for me to take his picture too. As he grinned, straightened his back, and puffed up for his portrait, I finally realized that this wasn't all so serious, that I would be accepted here and loved for who I was. The little monks shuffled over to give me a seat, and I settled into the room's energy of peace and contentment. I felt at home as the chanting built to its peak, joy as the instruments thundered through the hall once again.
+After four days at the monastery, I had only just summoned up the courage to take part in the proceedings. Taking a deep breath, I took off my shoes and entered the hall. Before the two head monks of the village and the Lord Buddha glittering in gold, I paid my respects. Three times I raised my pressed palms to my forehead, brought them down to my chest, then knelt and touched my head to the floor. I heard giggling from the young novices and flushed red; I'd made a mistake. I was supposed to touch my hands to my chin, too. I looked around, but if any others had noticed my blunder, no one seemed to care. Lhakpa Kaji, the youngest of the novices and ever the trouble maker, was paying his own respects, and as he bowed he kept stealing glances at me and giggling. I took my camera out to photograph him. Seeing the camera, Serzhang, the teacher of the monastery, motioned for me to take his picture too. As he grinned, straightened his back, and puffed up for his portrait, I finally realized that this wasn't all so serious, that I would be accepted here and loved for who I was. The little monks shuffled over to give me a seat, and I settled into the room's energy of peace and contentment. I felt at home as the chanting built to its peak, joy as the instruments thundered through the hall once again.
 
 ![Lhakpa Kaji shoots me a cheesy grin as he pays his respects during the Panggom Duwa Puja ceremony.](../images/20221031-inbetween-time-0537-blog.jpg '#width=100%;max-width=400px;margin-left=auto;margin-right=auto;')
 
@@ -42,6 +42,8 @@ Predicatably, Pema wouldn't give me a machete. Probably a good choice. Instead I
 His hands felt like rawhide, tanned in the high mountain sun and weathered through a lifetime of toil in the dirt. They felt like solid granite, like rock left in the ground because they were too hard to break up to create masonry blocks. His hands spoke of the stories he had told me as we worked, of a village destitute and crumbling, its men wandering for any work they could find because their fields had gone dry, braving the harsh winter nights with bare feet and no more than a thin sweater since they could not even buy clothing. They spoke of a generation of children whose families could not afford to finish their education, destined to wander too. His hands spoke of these stories and told me they were true. As they, so hardened themselves, held mine so gently to ease my pain, I thought only of how opposite the situation truly was. How far removed was I from the hardship this man has endured his entire life, how lucky was I to share his path for even an hour, knowing I could return to my privilege any time I wanted.
 
 "Gahro chha, Nepal ma (It's hard in Nepal)" is a refrain every mountain dweller says here. As much as 75% of Nepal's population works in agriculture, and of that group 68% rely on subsistence farming as their main source of food. Yet without basic infrastructure like roads and irrigation systems, most are unable to even meet their own nutritional needs and have no means of bringing goods to market. As a result, 28% of Nepal's rural population is multi-dimensionally poor, wanting most for food, housing materials, and education. When there's no rain, there's no work, so people like these men take to the trails for whatever employment they can find. These people possess tremendous strength and resolve, but it is strength borne of a hardship I cannot begin to imagine.
+
+![The building process: In the background, men mine surface rock brittle enough to break. Others carry it to the site, where it is hewn into building blocks and stacked.](../images/20221111-inbetween-times-0042-blog.jpg '#width=100%;max-width=1000px;margin-left=auto;margin-right=auto;')
 
 My hands as torn as they were, I took up more the more fitting task of lifting massive stones onto the other mens' backs for them to haul up to the construction site, where they were hammered into crude bricks for the foundation's construction. At the end of the day, we huddled close and shared copious cups of the local millet alcohol called chang, and I tried my best to understand their stories of toil and life in the mountains. Everyone except me slept together on the floor of the living room. When I rose the next morning, work had already resumed.
 
@@ -71,13 +73,13 @@ Unable to leave, I tried shouting at Pasang Dawa for help, "our tent is broken! 
 
 A month later, 20 thousand feet high on the summit push of Mera Peak, Karma finally let our rope team sit for a true break. I crumbled to the snow and feebly unwrapped the Snickers bar I had been warming in my jacket pocket. My heart rate slowed, allowing my oxygen-starved brain even less of the blood it craved, and the capillaries in my head responded by swelling even further. As I hastily swallowed the candy, I felt every labored heartbeat pulsate in my skull. It didn't even taste good.
 
-![Glen takes a productive break as the sun rises over Kyashar, high on the summit push of Mera Peak.](../images/20221207-climbing-course-1707-blog.jpg '#width=100%;max-width=400px;margin-left=auto;margin-right=auto;')
+![Glen takes a productive break as the early sun graces Kyashar, high on the summit push of Mera Peak.](../images/20221207-climbing-course-1707-blog.jpg '#width=100%;max-width=400px;margin-left=auto;margin-right=auto;')
 
 I looked around; everyone was floundering. Diem and Travis, the other American students, had only just recovered from stomach illnesses similar to the one I had on the Chatrwa La, and altitude was ravaging the heads and lungs of every climber. Three of the Nepali students had severe Acute Mountain Sickness (AMS), and were given medicine after they began vomiting at high camp. Last night, Mingma had to evacuate one of our porters after he started acting erratically, a telltale sign of High Altitude Cerebral Edema (HACE), a progression of AMS which is almost certainly fatal if untreated. I had opted not to take medication, and last night's mild headache had become almost debilitating. Everyone was floundering, that is, except Karma, who possesses a genetic gift that allows him to flout altitude. He was cheery as ever - he almost looked like he'd break out into dance. 
 
-![Karma clips Diem into fixed lines in front of a sea of undulating glaciers, Nepal's eastern border with India visible in the background.](../images/20221207-climbing-course-1795-blog.jpg '#width=100%;max-width=800px;margin-left=auto;margin-right=auto;')
-
 "Okay!" Karma grinned as he threw his pack on, signaling the end of our break. I actually snarled at him.
+
+![Karma clips Diem into fixed lines in front of a sea of undulating glaciers, Nepal's eastern border with India visible in the background.](../images/20221207-climbing-course-1795-blog.jpg '#width=100%;max-width=800px;margin-left=auto;margin-right=auto;')
 
 --
 
