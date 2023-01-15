@@ -89,10 +89,12 @@ I looked around; everyone was floundering. Diem and Travis, the other American s
 
 Although Lindsay had escaped Nepal's trademark stomach ailments, her sinuses were not so lucky. In Lower Pisang three days before, she developed congestion that turned to a persistent cough and feverish weakness. We feared it was Covid, but without tests we had no way of confirming our suspicion. Regardless, she was in pain, and her condition had not improved even with an extra rest day at the fabulous Tilicho Hotel in Manang. Last night, I had given her an ultimatum. Manang was the terminus of the jeep road, and the last place on the circuit from which we could easily evacuate. We could either go down now, or we could go up. But going up entailed crossing the Thorong La, an almost 18 thousand foot high mountain pass that, having just come from near sea level in Chittiwan, we were absolutely not prepared for. To acclimatize, we would have to train our bodies to handle altitude by ascending 4,000 feet to Ice Lake and descending again to Manang. And we'd have to do it immediately, as the weather forecasts predicted a storm front in only a few days that would bar us from even attempting the pass.
 
-![High on the Thorong La, with Chulu West in the background](../images/20221223-climbing-course-3711-blog.jpg '#width=100%;max-width=800px;margin-left=auto;margin-right=auto;')
+![High on the Thorong La, with Chulu West in the background.](../images/20221223-climbing-course-3711-blog.jpg '#width=100%;max-width=800px;margin-left=auto;margin-right=auto;')
 
 From my small pack I handed Lindsay her water, and she gulped it down. Despite her illness, she had decided to try. We got up and resumed our march, making it through the next step, the next hour. In silence, I beamed with pride.
 
 --
 
 It's ironic and unflattering, but the suffering we experience as visitors to the Himalaya is not so much an unintended side effect as it is... the whole point. We think we're here to see the beauty of the mountains, but really we're here to take on a fraction of their hardship and just see if we can bear it. But unless you are pioneering new, committing routes on the highest peaks, the reality is that you will never even begin to approach the hardship borne every day by those that call this place home. So we come, and must recognize that we come, as students. And as students, we learn what we can bear and what we can't, and through perseverence tempered with knowledge and caution, we learn we can succeed.
+
+![Red Sky in the Morning: clouds from the south vault over the Annapurna Massif and catch the rising sun.](../images/20221221-climbing-course-3341-blog.jpg '#width=100%')
