@@ -8,6 +8,7 @@ import styled from "styled-components"
 import { fadeVariant } from "../js/utils/motion-variants"
 
 import { COLORS } from "../js/utils/constants"
+import { array } from "prop-types"
 
 function Index({ data }) {
   const posts = data.allMarkdownRemark.edges
@@ -22,18 +23,20 @@ function Index({ data }) {
     >
       <Seo title="Blog" />
       <Title>A collection of my more coherent thoughts</Title>
-      <SummaryList>
+      <SummaryGrid>
         {posts.map(({ node: post }) => (
-          <BlogPreview
-            title={post.frontmatter.title}
-            date={post.frontmatter.date}
-            path={post.frontmatter.path}
-            key={post.frontmatter.path}
-          >
-            {post.frontmatter.blurb}
-          </BlogPreview>
+          <Cell key={post.frontmatter.path}>
+            <BlogPreview
+              title={post.frontmatter.title}
+              date={post.frontmatter.date}
+              path={post.frontmatter.path}
+              image={post.frontmatter.image}
+            >
+              {post.frontmatter.blurb}
+            </BlogPreview>
+          </Cell>
         ))}
-      </SummaryList>
+      </SummaryGrid>
     </motion.div>
   )
 }
@@ -44,13 +47,41 @@ const Title = styled.h5`
   text-align: center;
   text-transform: lowercase;
   color: ${COLORS.bordeaux};
-  font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman,
+    Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol;
 `
 
-const SummaryList = styled.div`
-  max-width: 90%;
+const SummaryGrid = styled.div`
+  width: min(800px, 90%);
   margin-left: auto;
   margin-right: auto;
+  margin-top: 32px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 12px;
+
+  filter: drop-shadow(1px 4px 4px hsl(0deg 0% 0% / 0.2));
+`
+
+const Cell = styled.div`
+  &:first-of-type {
+    grid-column: 1 / -1;
+    aspect-ratio: 16 / 9;
+  }
+
+  aspect-ratio: 3 / 4;
+
+  will-change: transform;
+  transition: transform 600ms, filter 600ms;
+
+  &:hover {
+    transform: translateY(-2px);
+    filter: drop-shadow(2px 8px 8px hsl(0deg 0% 0% / 0.1));
+
+    transition: transform 300ms, filter 300ms;
+  }
 `
 
 export const pageQuery = graphql`
@@ -66,6 +97,11 @@ export const pageQuery = graphql`
             path
             date
             blurb
+            image {
+              childImageSharp {
+                gatsbyImageData(width: 800)
+              }
+            }
           }
         }
       }

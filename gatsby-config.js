@@ -27,25 +27,27 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [{
-          resolve: 'gatsby-remark-images',
-          options: {
-            maxWidth: 8000,
-            showCaptions: ['alt']
-          }
-        },
-        {
-          resolve: `gatsby-remark-image-attributes`,
-          options: {
-            dataAttributes: true
-          }
-        },
-        'gatsby-remark-unwrap-images']
-      }
+        plugins: [
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 8000,
+              showCaptions: ["alt"],
+            },
+          },
+          {
+            resolve: `gatsby-remark-image-attributes`,
+            options: {
+              dataAttributes: true,
+            },
+          },
+          "gatsby-remark-unwrap-images",
+        ],
+      },
     },
     `gatsby-transformer-sharp`,
-    'gatsby-plugin-image',
-    'gatsby-plugin-sharp-exif',
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp-exif",
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -59,7 +61,7 @@ module.exports = {
         icon: `src/images/akla_wolf.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-sass`, 
+    `gatsby-plugin-sass`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -71,8 +73,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-          shortname: `botembunkiart`
-      }
+        shortname: `botembunkiart`,
+      },
     },
+    `gatsby-plugin-image`,
   ],
 }
