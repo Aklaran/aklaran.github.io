@@ -3,11 +3,14 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import format from "date-fns/format"
 
 import { COLORS } from "../utils/constants"
 
 const BlogPreview = ({ title, date, path, children, image }) => {
   const imageData = getImage(image?.childImageSharp?.gatsbyImageData)
+
+  const formattedDate = format(new Date(date), "d MMMM y")
 
   return (
     <Wrapper>
@@ -17,7 +20,7 @@ const BlogPreview = ({ title, date, path, children, image }) => {
         </ImageWrapper>
         <InnerWrapper>
           <Title>{title}</Title>
-          <DateDisplay>{date}</DateDisplay>
+          <DateDisplay>{formattedDate}</DateDisplay>
           <PreviewBody>{children}</PreviewBody>
           <More>Read more</More>
         </InnerWrapper>
