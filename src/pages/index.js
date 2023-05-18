@@ -59,10 +59,10 @@ const SummaryGrid = styled.div`
   margin-top: 32px;
 
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
   gap: 12px;
 
-  filter: drop-shadow(1px 4px 4px hsl(0deg 0% 0% / 0.2));
+  filter: drop-shadow(1px 4px 8px hsl(0deg 0% 0% / 0.2));
 `
 
 const Cell = styled.div`
@@ -77,8 +77,8 @@ const Cell = styled.div`
   transition: transform 600ms, filter 600ms;
 
   &:hover {
-    transform: translateY(-2px);
-    filter: drop-shadow(2px 8px 8px hsl(0deg 0% 0% / 0.1));
+    transform: translateY(-4px);
+    filter: drop-shadow(2px 8px 16px hsl(0deg 0% 0% / 0.5));
 
     transition: transform 300ms, filter 300ms;
   }

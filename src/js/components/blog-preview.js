@@ -117,6 +117,7 @@ const FlexWrapper = styled.div`
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
+  gap: 8px;
 
   position: absolute;
   bottom: 0;
@@ -128,9 +129,10 @@ const FlexWrapper = styled.div`
 
   filter: drop-shadow(0px 0px 4px hsl(0deg 0% 0% / 1));
 
-  transition: bottom 400ms;
+  transition: bottom 800ms;
 
   ${Wrapper}:hover & {
+    transition: bottom 400ms;
     bottom: 100px;
   }
 `
@@ -154,7 +156,7 @@ const PreviewBody = styled.p`
 const More = styled.h5`
   grid-area: more;
 
-  &:hover {
+  ${InnerWrapper}:hover & {
     color: ${COLORS.bordeaux};
   }
 `
