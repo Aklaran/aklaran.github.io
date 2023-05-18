@@ -9,6 +9,8 @@ import { fadeVariant } from "../js/utils/motion-variants"
 import { COLORS } from "../js/utils/constants"
 
 import { GatsbyImage } from "gatsby-plugin-image"
+import * as Dialog from "@radix-ui/react-dialog"
+import UnstyledButton from "../js/components/unstyled-button"
 
 function PhotoDump({ data }) {
   const images = data.allImageSharp.edges.map(({ node }) => ({
@@ -32,9 +34,22 @@ function PhotoDump({ data }) {
         </Title>
         <Gallery>
           {images.map((image) => (
-            <ImageWrapper>
-              <GatsbyImage image={image.thumb} alt="image" />
-            </ImageWrapper>
+            <Dialog.Root>
+              <Dialog.Trigger asChild>
+                <ImageWrapper>
+                  <GatsbyImage image={image.thumb} alt="image" />
+                </ImageWrapper>
+              </Dialog.Trigger>
+              <Dialog.Portal>
+                <LightBoxOverlay />
+                <LightBoxContent>
+                  {/* <Dialog.Title>Title</Dialog.Title>
+                  <Dialog.Description>Description</Dialog.Description> */}
+                  <GatsbyImage image={image.full} alt="image" />
+                  <Dialog.Close asChild>close</Dialog.Close>
+                </LightBoxContent>
+              </Dialog.Portal>
+            </Dialog.Root>
           ))}
         </Gallery>
       </MaxWidthWrapper>
@@ -65,7 +80,7 @@ const Gallery = styled.article`
   justify-items: center;
 `
 
-const ImageWrapper = styled.div`
+const ImageWrapper = styled(UnstyledButton)`
   will-change: transform;
   overflow: hidden;
 
@@ -80,6 +95,22 @@ const ImageWrapper = styled.div`
   }
 `
 
+const LightBoxOverlay = styled(Dialog.Overlay)`
+  background-color: hsla(0deg 0% 0% / 0.5);
+  position: fixed;
+  inset: 0;
+`
+
+const LightBoxContent = styled(Dialog.Content)`
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 300px;
+  right: 300px;
+  height: 100dvh;
+  overflow: hidden;
+`
+
 export const pageQuery = graphql`
   query ImagesForGallery {
     allImageSharp(
@@ -90,7 +121,7 @@ export const pageQuery = graphql`
       edges {
         node {
           thumb: gatsbyImageData(width: 300, height: 300, placeholder: BLURRED)
-          full: gatsbyImageData(layout: FULL_WIDTH)
+          full: gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED)
           fields {
             exif {
               raw {
