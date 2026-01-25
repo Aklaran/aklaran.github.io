@@ -6,6 +6,7 @@ node_modules/
 dist/
 /blog/
 /projects/
+/images/optimized/
 
 # Logs
 *.log
@@ -21,3 +22,7 @@ pnpm-debug.log*
 # Temporary files
 *.tmp
 *.temp
+
+# Test outputs
+scripts/__tests__/test-output/
+coverage/
