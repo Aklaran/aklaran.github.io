@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "pnpm build:content && vite",
     "build:content": "node scripts/build.js",
-    "build": "pnpm build:content && vite build && cp -r blog dist/ && cp -r projects dist/",
+    "build": "pnpm build:content && vite build && cp -r blog dist/ && cp -r projects dist/ && cp -r css dist/ && cp -r js dist/ && cp -r images dist/",
     "preview": "vite preview",
     "clean": "rm -rf dist blog projects"
   },

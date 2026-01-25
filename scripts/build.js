@@ -41,13 +41,18 @@ async function buildBlogPosts() {
     const { frontmatter, html } = parseMarkdown(source)
     const slug = generateSlug(frontmatter.title || frontmatter.path?.split('/').pop() || file.replace('.md', ''))
     
+    // Convert absolute paths to relative paths for nested pages
+    const htmlWithRelativePaths = html
+      .replace(/src="\/images\//g, 'src="../../images/')
+      .replace(/href="\/images\//g, 'href="../../images/')
+    
     // Generate HTML from template
     const dateISO = new Date(frontmatter.date).toISOString()
     const output = template
       .replace(/\{\{TITLE\}\}/g, frontmatter.title)
       .replace(/\{\{DATE\}\}/g, formatDate(frontmatter.date))
       .replace(/\{\{DATE_ISO\}\}/g, dateISO)
-      .replace(/\{\{CONTENT\}\}/g, html)
+      .replace(/\{\{CONTENT\}\}/g, htmlWithRelativePaths)
       .replace(/\{\{BLURB\}\}/g, frontmatter.blurb || '')
     
     // Write to output directory
@@ -100,6 +105,11 @@ async function buildProjects() {
     const { frontmatter, html } = parseMarkdown(source)
     const slug = generateSlug(frontmatter.title)
     
+    // Convert absolute paths to relative paths for nested pages
+    const htmlWithRelativePaths = html
+      .replace(/src="\/images\//g, 'src="../../images/')
+      .replace(/href="\/images\//g, 'href="../../images/')
+    
     // Generate tags HTML
     const tagsHTML = frontmatter.tags
       ? frontmatter.tags.map(tag => `<span class="tag">${tag}</span>`).join('')
@@ -134,7 +144,7 @@ async function buildProjects() {
       .replace(/\{\{SUMMARY\}\}/g, frontmatter.summary || '')
       .replace(/\{\{TAGS\}\}/g, tagsHTML)
       .replace(/\{\{LINKS\}\}/g, linksHTML)
-      .replace(/\{\{CONTENT\}\}/g, html)
+      .replace(/\{\{CONTENT\}\}/g, htmlWithRelativePaths)
     
     // Write to output directory
     const outputPath = path.join(outputDir, slug)
