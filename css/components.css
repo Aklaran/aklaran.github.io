@@ -457,6 +457,65 @@
   text-align: center;
 }
 
+/* Page title */
+.page-title {
+  text-align: center;
+  margin: var(--spacing-3xl) 0 var(--spacing-xl);
+}
+
+/* Section title */
+.section-title {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Intro text */
+.intro-text {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Section wrapper with top margin */
+.section-spacing {
+  margin-top: var(--spacing-3xl);
+}
+
+/* View all link container */
+.view-all-container {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+}
+
+.view-all-link {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+/* Contact section */
+.contact-section {
+  margin: var(--spacing-3xl) auto;
+  text-align: center;
+  padding: var(--spacing-3xl) var(--spacing-lg);
+  background-color: var(--color-gray-50);
+  border-radius: var(--radius-lg);
+}
+
+.contact-section h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  font-weight: 500;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .nav {
