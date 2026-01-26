@@ -1,6 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
+  <script>
+    // Prevent FOUC (Flash of Unstyled Content) by setting theme before page renders
+    (function() {
+      const THEME_KEY = 'theme';
+      const savedTheme = localStorage.getItem(THEME_KEY);
+      let theme;
+      
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        theme = savedTheme;
+      } else {
+        // Check system preference
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        theme = prefersDark ? 'dark' : 'light';
+      }
+      
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
   {% include "../partials/head.njk" %}
 </head>
 <body>
