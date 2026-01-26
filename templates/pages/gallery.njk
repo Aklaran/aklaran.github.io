@@ -1,0 +1,23 @@
+{% extends "../layouts/base.njk" %}
+
+{% set pageTitle = 'Gallery - Bo Tembunkiart' %}
+{% set pageDescription = 'Photography from adventures in the Himalayas and beyond' %}
+{% set extraScripts = '<script type="module" src="' + pathPrefix + '/js/gallery.js"></script>' %}
+
+{% block content %}
+  <div class="container">
+    <h1 style="text-align: center; margin: var(--spacing-3xl) 0 var(--spacing-xl);">Gallery</h1>
+    
+    <div class="gallery-grid" data-gallery>
+      {% for image in galleryImages %}
+        <div class="gallery-item" data-gallery-image data-src="/images/optimized/medium/{{ image.filename }}" data-caption="{{ image.caption }}">
+          <picture>
+            <source type="image/webp" srcset="/images/optimized/thumbnail/{{ image.filenameNoExt }}.webp 400w, /images/optimized/medium/{{ image.filenameNoExt }}.webp 800w, /images/optimized/large/{{ image.filenameNoExt }}.webp 1600w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+            <source type="image/jpeg" srcset="/images/optimized/thumbnail/{{ image.filename }} 400w, /images/optimized/medium/{{ image.filename }} 800w, /images/optimized/large/{{ image.filename }} 1600w" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw">
+            <img src="/images/optimized/medium/{{ image.filename }}" alt="{{ image.alt }}" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

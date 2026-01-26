@@ -1,0 +1,23 @@
+{% extends "../layouts/base.njk" %}
+
+{% set pageTitle = 'Blog - Bo Tembunkiart' %}
+{% set pageDescription = 'Adventures in the mountains and reflections on wandering' %}
+
+{% block content %}
+  <div class="container">
+    <h1 style="text-align: center; margin: var(--spacing-3xl) 0 var(--spacing-xl);">Blog</h1>
+    
+    <div class="blog-grid">
+      {% for post in posts %}
+        <a href="/blog/{{ post.slug }}/" class="blog-card">
+          <img src="{{ post.image }}" alt="{{ post.title }}" class="blog-card-image">
+          <div class="blog-card-overlay">
+            <h3 class="blog-card-title">{{ post.title }}</h3>
+            <time class="blog-card-date">{{ post.dateFormatted }}</time>
+            <p class="blog-card-blurb">{{ post.blurb }}</p>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

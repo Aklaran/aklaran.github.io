@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  {% include "../partials/head.njk" %}
+</head>
+<body>
+  {% include "../partials/header.njk" %}
+
+  <main{% if mainClass %} class="{{ mainClass }}"{% endif %}>
+    {% block content %}
+    {% endblock %}
+  </main>
+</body>
+</html>

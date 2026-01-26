@@ -8,6 +8,12 @@ dist/
 /projects/
 /images/optimized/
 
+# Generated HTML pages (from Nunjucks templates)
+/index.html
+/blog.html
+/projects.html
+/gallery.html
+
 # Logs
 *.log
 npm-debug.log*

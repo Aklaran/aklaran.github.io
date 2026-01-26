@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ pageTitle | default('Bo Tembunkiart') }}</title>
+<meta name="description" content="{{ pageDescription | default('Software engineer who works across the stack to create meaningful solutions.') }}">
+
+<!-- Open Graph / Social Media -->
+<meta property="og:type" content="{{ ogType | default('website') }}">
+<meta property="og:title" content="{{ ogTitle | default(pageTitle) | default('Bo Tembunkiart') }}">
+<meta property="og:description" content="{{ ogDescription | default(pageDescription) | default('Software engineer who works across the stack to create meaningful solutions.') }}">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Styles -->
+<link rel="stylesheet" href="{{ pathPrefix }}/css/reset.css">
+<link rel="stylesheet" href="{{ pathPrefix }}/css/variables.css">
+<link rel="stylesheet" href="{{ pathPrefix }}/css/global.css">
+<link rel="stylesheet" href="{{ pathPrefix }}/css/components.css">
+
+<!-- Scripts -->
+<script type="module" src="{{ pathPrefix }}/js/theme-toggle.js"></script>
+<script type="module" src="{{ pathPrefix }}/js/main.js"></script>
+{{ extraScripts | safe }}
