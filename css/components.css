@@ -228,12 +228,16 @@
   color: white;
   border-radius: var(--radius-md);
   font-weight: 500;
-  transition: background-color var(--transition-fast);
+  transition: filter var(--transition-fast);
 }
 
 .project-link:hover {
-  background-color: var(--color-secondary);
+  filter: brightness(1.2);
   color: white;
+}
+
+[data-theme="dark"] .project-link:hover {
+  filter: brightness(0.8);
 }
 
 /* Blog cards */
