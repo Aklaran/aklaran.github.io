@@ -125,20 +125,21 @@
   display: inline-block;
   animation-duration: 2.5s;
   animation-iteration-count: 1;
+  perspective: 200px;
 }
 
 .wave.animated {
   animation-name: wave-animation;
-  transform-origin: 70% 70%;
+  transform-origin: center bottom;
 }
 
 @keyframes wave-animation {
-  0%, 100% { transform: rotate(0deg); }
-  10%, 30% { transform: rotate(14deg); }
-  20% { transform: rotate(-8deg); }
-  40% { transform: rotate(-4deg); }
-  50% { transform: rotate(10deg); }
-  60% { transform: rotate(0deg); }
+  0%, 100% { transform: rotateX(0deg) translateY(0); }
+  15% { transform: rotateX(25deg) translateY(2px); }
+  30% { transform: rotateX(0deg) translateY(0); }
+  45% { transform: rotateX(20deg) translateY(2px); }
+  60% { transform: rotateX(0deg) translateY(0); }
+  75% { transform: rotateX(15deg) translateY(1px); }
 }
 
 /* Project cards */
