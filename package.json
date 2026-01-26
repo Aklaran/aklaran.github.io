@@ -10,7 +10,7 @@
     "dev": "pnpm build:content && vite",
     "build:content": "node scripts/build.js",
     "build:images": "node scripts/process-images.js",
-    "build": "pnpm build:images && pnpm build:content && vite build && mkdir -p dist/images && cp -r blog dist/ && cp -r projects dist/ && cp -r css dist/ && cp -r js dist/ && cp -r images/optimized dist/images/optimized",
+    "build": "pnpm build:images && pnpm build:content && vite build && node scripts/copy-assets.js",
     "preview": "vite preview",
     "clean": "rm -rf dist blog projects images/optimized",
     "test": "vitest",
