@@ -128,6 +128,10 @@ class Lightbox {
    * Open lightbox at specific index
    */
   open(index) {
+    // #region agent log
+    const image = this.images[index];
+    fetch('http://127.0.0.1:7244/ingest/98fed46c-43df-45a6-9d4f-bd6f292818bf',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'gallery.js:130',message:'Lightbox opening',data:{index,imageSrc:image?.src,imageAlt:image?.alt},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'B,C'})}).catch(()=>{});
+    // #endregion
     this.currentIndex = index
     this.render()
     this.bindEvents()
@@ -169,6 +173,10 @@ class Lightbox {
   render() {
     const image = this.images[this.currentIndex]
     
+    // #region agent log
+    fetch('http://127.0.0.1:7244/ingest/98fed46c-43df-45a6-9d4f-bd6f292818bf',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'gallery.js:169',message:'Lightbox render start',data:{currentIndex:this.currentIndex,imageSrc:image.src,imageAlt:image.alt,caption:image.caption},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'B,C'})}).catch(()=>{});
+    // #endregion
+    
     this.overlay = document.createElement('div')
     this.overlay.className = 'lightbox-overlay'
     this.overlay.setAttribute('data-testid', 'lightbox')
@@ -189,6 +197,21 @@ class Lightbox {
     document.body.appendChild(this.overlay)
     this.imageElement = this.overlay.querySelector('.lightbox-image')
     this.captionElement = this.overlay.querySelector('.lightbox-caption')
+    
+    // #region agent log
+    fetch('http://127.0.0.1:7244/ingest/98fed46c-43df-45a6-9d4f-bd6f292818bf',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'gallery.js:192',message:'Lightbox render complete',data:{lightboxImgSrc:this.imageElement?.src},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'B,C'})}).catch(()=>{});
+    // #endregion
+    
+    // #region agent log
+    if (this.imageElement) {
+      this.imageElement.addEventListener('error', (e) => {
+        fetch('http://127.0.0.1:7244/ingest/98fed46c-43df-45a6-9d4f-bd6f292818bf',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'gallery.js:199',message:'Lightbox image load ERROR',data:{attemptedSrc:e.target?.src,errorType:'load-failed'},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'A,B,C'})}).catch(()=>{});
+      });
+      this.imageElement.addEventListener('load', () => {
+        fetch('http://127.0.0.1:7244/ingest/98fed46c-43df-45a6-9d4f-bd6f292818bf',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'gallery.js:202',message:'Lightbox image loaded successfully',data:{loadedSrc:this.imageElement?.src},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'A,B,C'})}).catch(()=>{});
+      });
+    }
+    // #endregion
   }
 
   /**
@@ -196,6 +219,10 @@ class Lightbox {
    */
   updateImage() {
     const image = this.images[this.currentIndex]
+    
+    // #region agent log
+    fetch('http://127.0.0.1:7244/ingest/98fed46c-43df-45a6-9d4f-bd6f292818bf',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'gallery.js:197',message:'Updating lightbox image',data:{currentIndex:this.currentIndex,newImageSrc:image.src},timestamp:Date.now(),sessionId:'debug-session',hypothesisId:'B,C'})}).catch(()=>{});
+    // #endregion
     
     if (this.imageElement) {
       this.imageElement.src = image.src
@@ -269,11 +296,20 @@ function initGallery() {
   
   // Collect all gallery images
   const imageElements = gallery.querySelectorAll('[data-gallery-image]')
-  const images = Array.from(imageElements).map((el) => ({
-    src: el.getAttribute('data-src') || el.querySelector('img')?.src || '',
-    alt: el.querySelector('img')?.alt || '',
-    caption: el.getAttribute('data-caption') || '',
-  }))
+  const images = Array.from(imageElements).map((el) => {
+    // #region agent log
+    const dataSrc = el.getAttribute('data-src');
+    const imgTag = el.querySelector('img');
+    const imgSrc = imgTag?.src || '';
+    const chosenSrc = imgTag?.src || el.getAttribute('data-src') || '';
+    fetch('http://127.0.0.1:7244/ingest/98fed46c-43df-45a6-9d4f-bd6f292818bf',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'gallery.js:272',message:'Image source detection FIXED',data:{dataSrc,imgSrc,chosenSrc,hasImgTag:!!imgTag},timestamp:Date.now(),sessionId:'debug-session',runId:'post-fix',hypothesisId:'A,B,C'})}).catch(()=>{});
+    // #endregion
+    return {
+      src: el.querySelector('img')?.src || el.getAttribute('data-src') || '',
+      alt: el.querySelector('img')?.alt || '',
+      caption: el.getAttribute('data-caption') || '',
+    };
+  })
   
   // Initialize performance tracking
   const imgTags = gallery.querySelectorAll('img')
