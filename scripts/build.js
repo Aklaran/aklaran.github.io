@@ -194,7 +194,7 @@ async function buildStaticPages(posts, projects) {
   const sortedPosts = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date))
   
   // Get featured content for home page
-  const recentPosts = sortedPosts.slice(0, 2)
+  const recentPosts = sortedPosts.slice(0, 3)
   const featuredProjects = projects.slice(0, 2)
   
   // Build index.html
