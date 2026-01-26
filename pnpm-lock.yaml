@@ -7,10 +7,6 @@ settings:
 importers:
 
   .:
-    dependencies:
-      nunjucks:
-        specifier: ^3.2.4
-        version: 3.2.4
     devDependencies:
       gray-matter:
         specifier: ^4.0.3
@@ -21,6 +17,9 @@ importers:
       markdown-it-attrs:
         specifier: ^4.1.6
         version: 4.3.1(markdown-it@14.1.0)
+      nunjucks:
+        specifier: ^3.2.4
+        version: 3.2.4
       sharp:
         specifier: ^0.34.5
         version: 0.34.5
