@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "gray-matter": "^4.0.3",
-    "markdown-it": "^14.0.0",
+    "markdown-it": "^14.1.1",
     "markdown-it-attrs": "^4.1.6",
     "nunjucks": "^3.2.4",
     "sharp": "^0.34.5",
