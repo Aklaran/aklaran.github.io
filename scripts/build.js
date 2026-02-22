@@ -171,6 +171,7 @@ async function buildProjects() {
       summary: frontmatter.summary,
       image: frontmatter.image,
       tags: frontmatter.tags,
+      basis: frontmatter.basis || 'hobby',
       startDate: frontmatter.startDate,
       endDate: frontmatter.endDate,
       dateRange: dateRange,
@@ -195,18 +196,23 @@ async function buildStaticPages(posts, projects) {
   
   // Get featured content for home page
   const recentPosts = sortedPosts.slice(0, 3)
-  // Sort projects by start date (newest first) for featuring
-  const sortedProjects = [...projects].sort((a, b) => {
+  // Split and sort work vs projects by start date (newest first)
+  const sortByDate = (a, b) => {
     const dateA = a.startDate ? new Date(a.startDate) : new Date(0)
     const dateB = b.startDate ? new Date(b.startDate) : new Date(0)
     return dateB - dateA
-  })
-  const featuredProjects = sortedProjects.slice(0, 3)
+  }
+  const workBases = ['full-time', 'contract']
+  const work = projects.filter(p => workBases.includes(p.basis)).sort(sortByDate)
+  const personalProjects = projects.filter(p => !workBases.includes(p.basis)).sort(sortByDate)
+  const featuredWork = work.slice(0, 2)
+  const featuredProjects = personalProjects.slice(0, 2)
   
   // Build index.html
   const indexHtml = nunjucks.render('pages/index.njk', {
     pathPrefix: '',
     recentPosts,
+    featuredWork,
     featuredProjects,
   })
   await fs.writeFile(path.join(rootDir, 'index.html'), indexHtml)
@@ -223,7 +229,8 @@ async function buildStaticPages(posts, projects) {
   // Build projects.html
   const projectsHtml = nunjucks.render('pages/projects-index.njk', {
     pathPrefix: '',
-    projects,
+    work,
+    personalProjects,
   })
   await fs.writeFile(path.join(rootDir, 'projects.html'), projectsHtml)
   console.log('  ✓ projects.html')
