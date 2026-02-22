@@ -10,4 +10,6 @@ summary: As a Software Engineer for Microsoft's IoT Device Management team, I ma
 
 # Microsoft
 
-This is about Microsoft!
+As a Software Engineer on Microsoft's IoT Device Management team, I integrated third-party IoT technologies into employee experiences across five global campuses. My work centered on building event-driven data processing pipelines using Azure services and Kubernetes, handling the ingestion and routing of sensor data at scale.
+
+I also served as the team's SAFe certified Scrum Master, leading Agile practices and coordinating across distributed teams to keep complex, multi-stakeholder projects on track.

@@ -195,7 +195,13 @@ async function buildStaticPages(posts, projects) {
   
   // Get featured content for home page
   const recentPosts = sortedPosts.slice(0, 3)
-  const featuredProjects = projects.slice(0, 2)
+  // Sort projects by start date (newest first) for featuring
+  const sortedProjects = [...projects].sort((a, b) => {
+    const dateA = a.startDate ? new Date(a.startDate) : new Date(0)
+    const dateB = b.startDate ? new Date(b.startDate) : new Date(0)
+    return dateB - dateA
+  })
+  const featuredProjects = sortedProjects.slice(0, 3)
   
   // Build index.html
   const indexHtml = nunjucks.render('pages/index.njk', {
